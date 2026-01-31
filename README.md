@@ -3,7 +3,7 @@ Definition and rules for a llm refactor - specific for AI code
 
 AI Specific Code Smells
 
-Pandas et simila
+## Pandas et simila
 
 | Name                                   | Description                                                                               |
 | -------------------------------------- | ----------------------------------------------------------------------------------------- |
@@ -18,9 +18,9 @@ Pandas et simila
 | **Implicit Type Casting**              | Relying on Pandas implicit dtype conversion.                                              |
 | **Duplicate Train/Test Preprocessing** | Same preprocessing logic duplicated for train and test sets.                              |
 
-Numpy
+## Numpy
 
-**| Name                                  | Description                                                 |
+| Name                                  | Description                                                 |
 | ------------------------------------- | ----------------------------------------------------------- |
 | **Matrix Multiplication API Misused** | Using `np.dot()` instead of `@` or `np.matmul()`.           |
 | **Broadcasting Assumption**           | Implicit reliance on NumPy broadcasting without validation. |
@@ -29,9 +29,8 @@ Numpy
 | **Implicit Shape Dependency**         | Logic depends on undocumented tensor shapes.                |
 | **Mixed Precision Ignorance**         | No control over float32/float64 usage.                      |
 | **Manual Normalization Logic**        | Custom normalization instead of library utilities.          |
-**
 
-PyTorch
+## PyTorch
 
 | Name                            | Description                                           |
 | ------------------------------- | ----------------------------------------------------- |
@@ -46,7 +45,7 @@ PyTorch
 | **Hardcoded Device Selection**  | Explicit `"cuda"` strings scattered in code.          |
 | **Non-deterministic Training**  | Missing seed setup for reproducibility.               |
 
-TensorFlow/Keras
+## TensorFlow/Keras
 
 | Name                           | Description                                                            |
 | ------------------------------ | ---------------------------------------------------------------------- |
@@ -58,5 +57,5 @@ TensorFlow/Keras
 | **Callback Logic Duplication** | Repeated custom callbacks across experiments.                          |
 
 
-In progress others
+Looking for others smells and example in code
 
