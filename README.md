@@ -57,5 +57,5 @@ AI Specific Code Smells
 | **Callback Logic Duplication** | Repeated custom callbacks across experiments.                          |
 
 
-Looking for others smells and example in code
+Looking for others smells and example in code, not yet defined a specific prompt how to solve it!
 
