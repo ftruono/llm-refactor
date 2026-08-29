@@ -190,7 +190,7 @@ Stesso pattern di small: la rimozione avviene per lo più via modifica diretta (
 
 ## Capitolo 3 — NICHE Large
 
-File usati: `NICHE_large_sampled_id_date_filtered_introducingv-p1/p2/p3.csv` (introduzioni, uniti in un unico dataset), `large_intro_removing_output_results.csv` (match introduzione↔rimozione).
+File usati: `NICHE_large_sampled_id_date_filtered_introducingv.csv` (introduzioni, uniti in un unico dataset), `large_intro_removing_output_results.csv` (match introduzione↔rimozione).
 
 > **Nota tecnica**: i tre file di introduzione contengono alcuni campi testuali (commit message / lista file modificati) con virgolette non correttamente escapate, che mandano in errore il parser CSV standard. Sono stati letti con un parser tollerante che scarta solo le righe realmente malformate (1 riga su 5355 nel file p1); dopo l'unione dei tre file sono state rimosse 293 righe duplicate esatte (probabile overlap ai bordi dello split in 3 parti). Il totale netto di introduzioni uniche usato per l'analisi è **11.518** (su 11.666 righe grezze).
 

@@ -1,0 +1,1125 @@
+project_name,filename,smell_name,occurrence_id,line,new_commit,new_commit_message,new_commit_date,new_change_type,removing_number_commits,number_commits,release_hash,release_date,first_commit_date,relative_path,new_feature,bug_fixing,enhancement,refactoring,first_commit_goal
+RexYing/gnn-model-explainer,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/RexYinggnn-model-explainer_analysis/cb0afff9f31e904deb966bb9008bd6e89ef7965f/input/modified/explainer/explain.py,columns_and_datatype_not_explicitly_set,1,267,b79f883aeb7ff2954ab8cf5833b3488d7a39072b,plot,2019-01-30 06:34:55+00:00,MODIFY,39.0,172.0,,,2018-12-22T12:46:05Z,explainer/explain.py,0.0,0.0,0.0,0.0,other
+alvinwan/neural-backed-decision-trees,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/alvinwanneural-backed-decision-trees_analysis/31e604896ff09fab54e6975dc0e8f981a49fe119/input/modified/nbdt/analysis.py,pytorch_call_method_misused,1,248,53c9e459a071d98e70a66553313b791a8620b5c6,moved embeddedDecisionRules to model,2020-04-02 02:01:07+00:00,MODIFY,615.0,817.0,,,2020-03-20T01:18:16Z,nbdt/analysis.py,0.0,0.0,0.0,1.0,refactoring
+alvinwan/neural-backed-decision-trees,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/alvinwanneural-backed-decision-trees_analysis/e82d70c9ef38f5001200a73abfe376fb4cad440d/input/modified/nbdt/analysis.py,pytorch_call_method_misused,1,463,0812e35d27d4bf1adb069c0ff815aeaa8c7d8fd0,"Decay (#17)
+
+* add nominal support for kl div
+
+* boilerplate for new dataset
+
+* hierarchy-based soft labels
+
+* rm custom dataset, implement soft labels as loss
+
+* move criterions to device too
+
+* move dists to right device
+
+* add hlt to fname
+
+* added lr to fname
+
+* in-run validation reporting for soft decision rules
+
+* fix hierarchical label smoothing
+
+* decaying softness
+
+* added softceloss
+
+* threshold safeties
+
+* new, actual decay flag
+
+* fixed normalization + softmax
+
+* label smoothing baseline
+
+* fix baseline label smoothing by rm softmax
+
+* 🐛
+
+* fix smoothing 1-tau value
+
+* tuned baseline tau
+
+* report best acc for analysis
+
+* pass normalization type
+
+* unused one-hotify
+
+* change default to div, update cckpt name
+
+* hierarchihcal smoothing with label smoothing tau
+
+* fixed hlt
+
+* huh
+
+* Fixxd ddist
+
+* decay for tree sup loss
+
+* added grow
+
+* fix ckpt name
+
+* change grow/decay to start/end tsw
+
+* update ckpt fname with tsw tswe
+
+* added tswp
+
+* xent weight too
+
+* xent wgt in ckpt name
+
+* to device
+
+* hierarchical smoothing exps
+
+* rm hls fpath uttils",2020-11-12 04:36:59+00:00,MODIFY,802.0,817.0,,,2020-03-20T01:18:16Z,nbdt/analysis.py,1.0,1.0,1.0,1.0,new_feature
+PetrochukM/PyTorch-NLP,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/PetrochukMPyTorch-NLP_analysis/529de53443cbf38fca55504fae519012f63511bb/input/modified/torchnlp/datasets/dataset.py,columns_and_datatype_not_explicitly_set,1,96,4e84780a8a741d6a90f2752edc4502ab2cf89ecb,Lazy load pandas,2019-08-18 16:23:05+00:00,MODIFY,361.0,408.0,41fe6cc32fb3b7f079a002ae7d125e7efc815be7,2019-11-04T04:45:44Z,2018-02-25T05:00:36Z,torchnlp/datasets/dataset.py,0.0,0.0,0.0,0.0,other
+PetrochukM/PyTorch-NLP,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/PetrochukMPyTorch-NLP_analysis/9e98b21b03c12a57b3397e88b1770536931b0412/input/modified/torchnlp/datasets/simple_qa.py,columns_and_datatype_not_explicitly_set,1,72,4e84780a8a741d6a90f2752edc4502ab2cf89ecb,Lazy load pandas,2019-08-18 16:23:05+00:00,MODIFY,361.0,408.0,41fe6cc32fb3b7f079a002ae7d125e7efc815be7,2019-11-04T04:45:44Z,2018-02-25T05:00:36Z,torchnlp/datasets/simple_qa.py,0.0,0.0,0.0,0.0,other
+AaronWard/covidify,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/AaronWardcovidify_analysis/580b20000b34eea9b2d3d50f5ff1e1484c20f033/input/modified/src/covidify/data_prep.py,columns_and_datatype_not_explicitly_set,1,120,7bb9af4d636c7e78d491d83312346223d5adf710,UPDATE - did a code clean up and moved github extraction to a separate script,2020-03-11 14:04:57+00:00,MODIFY,162.0,270.0,c3e722b60824c8739045ac4c57b50b1478a995b2,2020-06-17T09:18:27Z,2020-01-30T00:08:53Z,src/covidify/data_prep.py,0.0,0.0,1.0,1.0,enhancement
+biolib/openprotein,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/biolibopenprotein_analysis/3a3c316532bce0e0acda695c82bb49d4daa46613/input/modified/__main__.py,gradients_not_cleared_before_backward_propagation,1,100,023380169c2c0750e8fe52b574e08da7a9baadf4,migrate training to its own file,2019-04-22 18:55:09+00:00,MODIFY,45.0,163.0,,,2018-09-08T15:19:22Z,__main__.py,0.0,0.0,1.0,0.0,enhancement
+arogozhnikov/hep_ml,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/arogozhnikovhep_ml_analysis/212c83ee6316eb74bf450345872f1ecbfe7c261b/input/modified/hep_ml/experiments/speedup.py,columns_and_datatype_not_explicitly_set,1,161,7fab97e217159dcecbc8cf72a9b962ab631e087d,python 3 fixes in tests.,2015-09-05 14:09:05+00:00,MODIFY,198.0,331.0,281e08912f52dd2fe96080ee96bd7ff56c30e330,2017-08-28T19:50:07Z,2015-05-05T14:17:36Z,hep_ml/experiments/speedup.py,0.0,1.0,0.0,0.0,bug_fixing
+arogozhnikov/hep_ml,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/arogozhnikovhep_ml_analysis/0c39df17c72fd8adbaa3bf4db30abdbbfbcf5da7/input/modified/hep_ml/preprocessing.py,columns_and_datatype_not_explicitly_set,2,145,57e0a66354c2c1b8210693da902b5182ce84e777,"many updates to preprocessing, extended tests",2016-01-10 21:21:48+00:00,MODIFY,236.0,331.0,281e08912f52dd2fe96080ee96bd7ff56c30e330,2017-08-28T19:50:07Z,2015-05-05T14:17:36Z,hep_ml/preprocessing.py,0.0,0.0,1.0,0.0,enhancement
+hunglc007/tensorflow-yolov4-tflite,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/hunglc007tensorflow-yolov4-tflite_analysis/0b0e543b375e151de01b5420501e6f20755578e4/input/modified/detectvideo.py,tensor_array_not_used,1,84,87ee36d719fbb109ec36cacc76ceb89e7d3da834,Fix the color space of the output video in 'detectvideo.py',2020-08-05 07:14:08+00:00,MODIFY,158.0,158.0,,,2020-04-24T10:22:52Z,detectvideo.py,0.0,1.0,0.0,0.0,bug_fixing
+hysts/pytorch_image_classification,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/hystspytorch_image_classification_analysis/1d76092c2437758b545602c3d892e6e78ad77fb4/input/modified/train.py,gradients_not_cleared_before_backward_propagation,3,329,6ff2a139ef34a678e5798f2289bad592cdd1a614,Refactor,2019-05-25 21:00:49+00:00,MODIFY,149.0,185.0,,,2017-12-09T22:32:57Z,train.py,0.0,0.0,0.0,1.0,refactoring
+geyang/ml_logger,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/geyangml_logger_analysis/e0f04ca6a510d83fee590c8d49158a1296c149fe/input/modified/ml-dash-server/ml_dash/schema/files/series.py,Chain_Indexing,1,147,34b7c59f2b2d0e2c1df43ee1b4adc048e44de45d,fix qCut error,2019-05-05 08:08:26+00:00,MODIFY,372.0,531.0,,,2018-04-21T07:27:55Z,ml-dash-server/ml_dash/schema/files/series.py,0.0,1.0,0.0,0.0,bug_fixing
+geyang/ml_logger,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/geyangml_logger_analysis/a40abdaed4e9949a7cd791d53710051e7a305a33/input/modified/ml-dash-server/ml_dash/schema/files/series.py,in_place_apis_misused,1,211,25aff14cf101ac4db06be02e65d845c54fc38c84,sort_values is in-place,2019-03-26 01:32:21+00:00,MODIFY,220.0,531.0,,,2018-04-21T07:27:55Z,ml-dash-server/ml_dash/schema/files/series.py,0.0,0.0,0.0,0.0,other
+geyang/ml_logger,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/geyangml_logger_analysis/317e6cda2ca2d39b14fc4b32629758fe8b5fc0dc/input/modified/ml_logger/ml_logger/ml_logger.py,columns_and_datatype_not_explicitly_set,1,1539,121a39c025c738dc71796abc3c924c31cdaa7b4f,import os.path.join as pJoin,2020-03-13 17:56:52+00:00,MODIFY,509.0,531.0,,,2018-04-21T07:27:55Z,ml_logger/ml_logger/ml_logger.py,0.0,0.0,0.0,0.0,other
+AICoE/prometheus-anomaly-detector,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/AICoEprometheus-anomaly-detector_analysis/ef4cd1f2282e28886c291be3067f914509c780fd/input/modified/model.py,columns_and_datatype_not_explicitly_set,1,60,22d066bbed58a59cb98bcbf34adc9f4164eb9244,"Remove unused functions/variables (#8)
+
+* Update model.py
+
+Remove unused variables
+
+Removing the unused function
+
+* Update model_fourier.py
+
+Remove unused function
+
+Remove unused variables",2019-05-21 18:51:05+00:00,MODIFY,11.0,135.0,,,2019-05-15T19:10:22Z,model.py,0.0,0.0,1.0,1.0,enhancement
+AICoE/prometheus-anomaly-detector,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/AICoEprometheus-anomaly-detector_analysis/4b000b89e7b0a33a4aad5a89fa26cad54707f3e4/input/added/model_fourier.py,columns_and_datatype_not_explicitly_set,1,103,22d066bbed58a59cb98bcbf34adc9f4164eb9244,"Remove unused functions/variables (#8)
+
+* Update model.py
+
+Remove unused variables
+
+Removing the unused function
+
+* Update model_fourier.py
+
+Remove unused function
+
+Remove unused variables",2019-05-21 18:51:05+00:00,MODIFY,11.0,135.0,,,2019-05-15T19:10:22Z,model_fourier.py,0.0,0.0,1.0,1.0,enhancement
+joeynmt/joeynmt,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/joeynmtjoeynmt_analysis/8feabf500576324406675dcdf7d7f18b7214930d/input/modified/joeynmt/model.py,pytorch_call_method_misused,1,130,c1feb199dc7fd3d188591985e437cf7405a0cbd1,fix pylint error,2020-10-08 21:16:15+00:00,MODIFY,563.0,563.0,7da62dc4b646c03610b030a804ea8c4881926b43,2020-10-31T12:44:14Z,2018-10-15T15:00:57Z,joeynmt/model.py,0.0,1.0,0.0,0.0,bug_fixing
+kan-bayashi/PytorchWaveNetVocoder,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/kan-bayashiPytorchWaveNetVocoder_analysis/6f3720a307594f00beaf8b7f51199fc34a7b43a1/input/modified/src/nets/wavenet.py,pytorch_call_method_misused,1,227,4e034e7ff0f58ccfcfcabbb5fd976ceb774f21ae,adde docstring,2018-01-12 06:45:21+00:00,MODIFY,37.0,384.0,45bcf633230b763d4130645c0ec392bdad29c89f,2019-04-08T14:20:33Z,2017-12-24T13:32:21Z,src/nets/wavenet.py,1.0,0.0,0.0,0.0,new_feature
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/27977e07b891e94b9478976f3912310b504d6a05/input/added/pykg2vec/core/ConvKB.py,tensor_array_not_used,1,111,7b083e1b946ade1133672506bdc00afb8a2ce1b5,preliminary version of convkb fixed,2019-07-24 00:31:03+00:00,MODIFY,654.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/core/ConvKB.py,0.0,1.0,0.0,0.0,bug_fixing
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/b756e4ac38685d27725c319d152d581af38de56b/input/modified/pykg2vec/core/TransE.py,in_place_apis_misused,1,113,eb27d3a4abf8bc0971861b4a2dd3dfe4030ece3d,"Merge branch 'development' of https://github.com/Sujit-O/pykg2vec into development
+
+# Conflicts:
+#	pykg2vec/core/TransE.py",2019-04-10 01:28:48+00:00,MODIFY,66.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/core/TransE.py,0.0,0.0,0.0,1.0,refactoring
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/eb27d3a4abf8bc0971861b4a2dd3dfe4030ece3d/input/modified/pykg2vec/core/TransE.py,columns_and_datatype_not_explicitly_set,1,196,b660b6f1e9bcbc1fa121f76ce9bd52499a363b3e,update algorithms,2019-04-10 21:58:15+00:00,MODIFY,68.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/core/TransE.py,0.0,0.0,1.0,0.0,enhancement
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/7073ec1c84221ec11b12a81a86f2e24ceeabe6b7/input/modified/pykg2vec/utils/evaluation.py,in_place_apis_misused,1,194,0468f7992ab73d6424e9c1c79c0f9a3cf0dcbfde,removed unnecessary test_batch functions,2019-05-10 00:16:09+00:00,MODIFY,321.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/evaluation.py,0.0,0.0,1.0,1.0,enhancement
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/0468f7992ab73d6424e9c1c79c0f9a3cf0dcbfde/input/modified/pykg2vec/utils/evaluation.py,in_place_apis_misused,1,258,35dc0b2f78cfdcc7128bee59836e4495bd159f63,moved test display in evaluator as static funciton,2019-05-10 00:40:40+00:00,MODIFY,324.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/evaluation.py,0.0,0.0,0.0,1.0,refactoring
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/082ae4e00fde253b8b818988169c2bd4fe04ef90/input/modified/pykg2vec/utils/evaluation.py,in_place_apis_misused,1,128,2698e4900ae47c5017557825bf2022a064b0b1a5,added test_batch for transR,2019-04-29 23:04:46+00:00,MODIFY,223.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/evaluation.py,1.0,0.0,0.0,0.0,new_feature
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/7ef2bbf3e5843cb8f71888392497dfa4b116c18a/input/modified/pykg2vec/utils/evaluation.py,in_place_apis_misused,1,248,c58bfd4479702b953afd87d21e4ebe1b3672e46f,clean evaluation.py,2019-05-30 06:40:23+00:00,MODIFY,428.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/evaluation.py,0.0,0.0,0.0,1.0,refactoring
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/61fe8d78fe4726b4a24aaebb7257458e943e37d9/input/modified/pykg2vec/utils/evaluation.py,in_place_apis_misused,1,368,28f422232f7be445e6a3cb2045216974a0bde3fa,removed unnecessary test_batch functions,2019-05-09 21:53:31+00:00,MODIFY,314.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/evaluation.py,0.0,0.0,1.0,1.0,enhancement
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/1ed437a9507c0d813c875bb8ec5a807573849f81/input/modified/pykg2vec/utils/evaluation.py,in_place_apis_misused,1,138,87e8bb166f514fe9b8a88c1b6f07b94c8055775b,add testing batch size in config and rename,2019-05-08 19:08:55+00:00,MODIFY,304.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/evaluation.py,1.0,0.0,0.0,1.0,new_feature
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/bf877de233e473b21c8db080377086789363bf44/input/modified/pykg2vec/utils/evaluator.py,in_place_apis_misused,1,78,f0d2098613b8aeb791231b10f7489c62f4fd7792,remove batch testings.,2020-03-11 01:32:00+00:00,MODIFY,959.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/evaluator.py,0.0,0.0,1.0,1.0,enhancement
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/42f77994422dc7954491d9eef0cd611a2b10ed9b/input/modified/pykg2vec/utils/evaluator.py,columns_and_datatype_not_explicitly_set,1,392,1c6a7766a3102e4f13903c7144eb16236f74d48d,remove multprocess in evaluator.,2020-03-13 06:10:02+00:00,MODIFY,1031.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/evaluator.py,0.0,0.0,1.0,1.0,enhancement
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/3757566300478718b3719f351903179ff7293727/input/modified/pykg2vec/utils/evaluator.py,in_place_apis_misused,1,315,4e8ecab2e557387d3c747be38fc967758cb98edb,adding non multiprocess mode evaluator.,2020-03-12 23:35:56+00:00,MODIFY,1017.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/evaluator.py,1.0,0.0,0.0,0.0,new_feature
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/342a3950d836895bcef9587bd8ae0c92c3c47093/input/modified/pykg2vec/utils/trainer.py,columns_and_datatype_not_explicitly_set,1,438,f01f8f38dad8653ca6a62e0319e2049a315feed6,fix visualization,2020-06-26 07:46:25+00:00,MODIFY,1292.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/trainer.py,0.0,1.0,0.0,0.0,bug_fixing
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/5db2e7befe04b8e50a955d6cbb728fdcf14425aa/input/modified/pykg2vec/utils/trainer.py,in_place_apis_misused,1,334,86c3f76741c71a1fb7bbe0a1015353e37f8cb3cd,"add linting, improve named embedding and error handling",2020-06-29 08:36:14+00:00,MODIFY,1305.0,1305.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/trainer.py,1.0,1.0,1.0,0.0,new_feature
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/65bc13909d56f10dba0f20bb9ccb0dd6c62f3bb3/input/deleted/pykg2vec/utils/trainer.py,in_place_apis_misused,5,366,74596b3a6e2ab1127570e09852f599dcc0bc8e65,change core to models,2020-06-25 07:28:03+00:00,MODIFY,1251.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/trainer.py,0.0,0.0,1.0,0.0,enhancement
+Sujit-O/pykg2vec,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/Sujit-Opykg2vec_analysis/21e82477164f128e00276d2e137f865a8277fcc5/input/modified/pykg2vec/utils/visualization.py,in_place_apis_misused,1,420,98c3b652825fa528e17054fe432067df63c62395,add vis,2019-06-13 16:43:10+00:00,MODIFY,555.0,1304.0,311e8d5274d8f4b3b115f5b49c7e48a4ca6e43b4,2019-06-14T23:43:27Z,2019-03-06T23:06:11Z,pykg2vec/utils/visualization.py,1.0,0.0,0.0,0.0,new_feature
+mlmed/torchxrayvision,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/mlmedtorchxrayvision_analysis/2011ee28e9e286937429d3c335ee5b57c33116ba/input/modified/torchxrayvision/datasets.py,in_place_apis_misused,4,1712,b6a9e1d38abe8d8f8bc0c3080af54f7ef7ea9da3,"Add sphinx documentation (#131)
+
+* initial version
+
+* rework inline docs
+
+* fix link
+
+* cleanup covid dataset interface
+
+* refactor for docs
+
+* add images
+
+* add helper page
+
+* update for docs
+
+* fix references
+
+* clean up model docs",2023-04-05 00:46:50+00:00,MODIFY,366.0,398.0,ddbe9424b17b5c0b69a01e102fa3f6fca9812395,2021-12-16T03:30:00Z,2020-03-04T03:26:11Z,torchxrayvision/datasets.py,1.0,1.0,1.0,1.0,new_feature
+mlmed/torchxrayvision,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/mlmedtorchxrayvision_analysis/50e783e0525ed119ecb966d0e4ae08e799bfb8b5/input/modified/torchxrayvision/datasets.py,in_place_apis_misused,1,126,0b901695066c296109259f5e9e2588516a433514,Complete conversion to base class view management where feasible,2021-10-28 00:23:13+00:00,MODIFY,303.0,398.0,ddbe9424b17b5c0b69a01e102fa3f6fca9812395,2021-12-16T03:30:00Z,2020-03-04T03:26:11Z,torchxrayvision/datasets.py,0.0,0.0,0.0,0.0,other
+ShangtongZhang/DeepRL,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ShangtongZhangDeepRL_analysis/e427e8f73f7d6c6ae0283a7a4438b724725ec192/input/added/component/bench.py,columns_and_datatype_not_explicitly_set,1,118,8623fe849b0570d3339a76b12d9c18ec5171ddd7,Regenerate images,2018-04-07 16:11:33+00:00,MODIFY,173.0,404.0,e427e8f73f7d6c6ae0283a7a4438b724725ec192,2018-04-02T21:22:56Z,2017-04-20T19:59:53Z,component/bench.py,0.0,0.0,1.0,0.0,enhancement
+ShangtongZhang/DeepRL,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ShangtongZhangDeepRL_analysis/63f8027199394d4d318e383eaa433164b929334b/input/modified/network/base_network.py,pytorch_call_method_misused,1,82,0b57fdbc70168f5d938e4c144e5806035844829e,Rewrite discrete networks,2018-04-04 22:19:40+00:00,MODIFY,165.0,404.0,e427e8f73f7d6c6ae0283a7a4438b724725ec192,2018-04-02T21:22:56Z,2017-04-20T19:59:53Z,network/base_network.py,0.0,0.0,0.0,1.0,refactoring
+interpretml/DiCE,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/interpretmlDiCE_analysis/d76cd209bb0d4fea79ed8afd23a626f64262eab4/input/modified/dice_ml/data_interfaces/private_data_interface.py,columns_and_datatype_not_explicitly_set,1,264,a25a079459e3acbe55735ff6f8f186c615530be2,"[Major-update] Flexible transformations for explainer and model, allowing df input to generate_counterfactuals (#65)
+
+* added transformation support and dataframe input in original scale
+
+* removed transformers as input
+
+* updates flexible data transformations for DiCE and ML model
+
+* update with T1 and T2 transformations
+
+* update TF, PYT and random sampling explainers with data transformation functions
+
+* fix posthoc sparsity correction and update pytests
+
+Signed-off-by: Amit Sharma <amit_sharma@live.com>
+
+Co-authored-by: raam93 <raam.arvind93@gmail.com>",2021-02-22 03:06:58+00:00,MODIFY,321.0,780.0,ee4b2f47385f1f851e9aee420458d3886f969006,2021-03-01T15:23:28Z,2019-05-02T09:51:02Z,dice_ml/data_interfaces/private_data_interface.py,1.0,1.0,1.0,1.0,enhancement
+interpretml/DiCE,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/interpretmlDiCE_analysis/154565da7eab00badca683a6163d54032b09699b/input/modified/dice_ml/data_interfaces/private_data_interface.py,columns_and_datatype_not_explicitly_set,1,358,b12abb4c3549c489680fa5f785e885b103267a4f,"Ensure same type for CF output as the input features (#412)
+
+* same type for the input features
+
+* added tests and fixed bug
+
+Signed-off-by: Amit Sharma <amit_sharma@live.com>
+
+* fixed lint error
+
+* fixed lint
+
+* fixed private data interface
+
+* common functions in base_data
+
+* fixed lint error
+
+* fixed isort
+
+* avoiding flaky test fail whenever final_cfs_df is none
+
+---------
+
+Signed-off-by: Amit Sharma <amit_sharma@live.com>",2023-10-26 05:37:26+00:00,MODIFY,760.0,780.0,ee4b2f47385f1f851e9aee420458d3886f969006,2021-03-01T15:23:28Z,2019-05-02T09:51:02Z,dice_ml/data_interfaces/private_data_interface.py,1.0,1.0,0.0,1.0,new_feature
+interpretml/DiCE,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/interpretmlDiCE_analysis/7b49b076c76df45ee03e9a635dc252573fd620ee/input/modified/dice_ml/data_interfaces/public_data_interface.py,columns_and_datatype_not_explicitly_set,1,383,a25a079459e3acbe55735ff6f8f186c615530be2,"[Major-update] Flexible transformations for explainer and model, allowing df input to generate_counterfactuals (#65)
+
+* added transformation support and dataframe input in original scale
+
+* removed transformers as input
+
+* updates flexible data transformations for DiCE and ML model
+
+* update with T1 and T2 transformations
+
+* update TF, PYT and random sampling explainers with data transformation functions
+
+* fix posthoc sparsity correction and update pytests
+
+Signed-off-by: Amit Sharma <amit_sharma@live.com>
+
+Co-authored-by: raam93 <raam.arvind93@gmail.com>",2021-02-22 03:06:58+00:00,MODIFY,321.0,780.0,ee4b2f47385f1f851e9aee420458d3886f969006,2021-03-01T15:23:28Z,2019-05-02T09:51:02Z,dice_ml/data_interfaces/public_data_interface.py,1.0,1.0,1.0,1.0,enhancement
+interpretml/DiCE,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/interpretmlDiCE_analysis/ead32f52206eff991c7a9d8428d85a1d1daf1524/input/modified/dice_ml/data_interfaces/public_data_interface.py,columns_and_datatype_not_explicitly_set,1,456,b12abb4c3549c489680fa5f785e885b103267a4f,"Ensure same type for CF output as the input features (#412)
+
+* same type for the input features
+
+* added tests and fixed bug
+
+Signed-off-by: Amit Sharma <amit_sharma@live.com>
+
+* fixed lint error
+
+* fixed lint
+
+* fixed private data interface
+
+* common functions in base_data
+
+* fixed lint error
+
+* fixed isort
+
+* avoiding flaky test fail whenever final_cfs_df is none
+
+---------
+
+Signed-off-by: Amit Sharma <amit_sharma@live.com>",2023-10-26 05:37:26+00:00,MODIFY,758.0,780.0,ee4b2f47385f1f851e9aee420458d3886f969006,2021-03-01T15:23:28Z,2019-05-02T09:51:02Z,dice_ml/data_interfaces/public_data_interface.py,1.0,1.0,0.0,1.0,new_feature
+interpretml/DiCE,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/interpretmlDiCE_analysis/4cd65c336ddd27857135168d0c2c97b121971d45/input/modified/dice_ml/dice_interfaces/dice_tensorflow.py,in_place_apis_misused,1,505,aebf385fa56d37f13cc1a770e926555b47f7230b,Linted code,2019-06-17 11:48:06+00:00,MODIFY,10.0,780.0,ee4b2f47385f1f851e9aee420458d3886f969006,2021-03-01T15:23:28Z,2019-05-02T09:51:02Z,dice_ml/dice_interfaces/dice_tensorflow.py,0.0,0.0,0.0,0.0,other
+interpretml/DiCE,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/interpretmlDiCE_analysis/797ed1e992e992dead455c69f3b79a8554d047b2/input/modified/dice_ml/diverse_counterfactuals.py,columns_and_datatype_not_explicitly_set,1,38,a25a079459e3acbe55735ff6f8f186c615530be2,"[Major-update] Flexible transformations for explainer and model, allowing df input to generate_counterfactuals (#65)
+
+* added transformation support and dataframe input in original scale
+
+* removed transformers as input
+
+* updates flexible data transformations for DiCE and ML model
+
+* update with T1 and T2 transformations
+
+* update TF, PYT and random sampling explainers with data transformation functions
+
+* fix posthoc sparsity correction and update pytests
+
+Signed-off-by: Amit Sharma <amit_sharma@live.com>
+
+Co-authored-by: raam93 <raam.arvind93@gmail.com>",2021-02-22 03:06:58+00:00,MODIFY,321.0,780.0,ee4b2f47385f1f851e9aee420458d3886f969006,2021-03-01T15:23:28Z,2019-05-02T09:51:02Z,dice_ml/diverse_counterfactuals.py,1.0,1.0,1.0,1.0,enhancement
+interpretml/DiCE,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/interpretmlDiCE_analysis/797ed1e992e992dead455c69f3b79a8554d047b2/input/modified/dice_ml/explainer_interfaces/explainer_base.py,columns_and_datatype_not_explicitly_set,1,121,a25a079459e3acbe55735ff6f8f186c615530be2,"[Major-update] Flexible transformations for explainer and model, allowing df input to generate_counterfactuals (#65)
+
+* added transformation support and dataframe input in original scale
+
+* removed transformers as input
+
+* updates flexible data transformations for DiCE and ML model
+
+* update with T1 and T2 transformations
+
+* update TF, PYT and random sampling explainers with data transformation functions
+
+* fix posthoc sparsity correction and update pytests
+
+Signed-off-by: Amit Sharma <amit_sharma@live.com>
+
+Co-authored-by: raam93 <raam.arvind93@gmail.com>",2021-02-22 03:06:58+00:00,MODIFY,321.0,780.0,ee4b2f47385f1f851e9aee420458d3886f969006,2021-03-01T15:23:28Z,2019-05-02T09:51:02Z,dice_ml/explainer_interfaces/explainer_base.py,1.0,1.0,1.0,1.0,enhancement
+interpretml/DiCE,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/interpretmlDiCE_analysis/3eca953b70024995bfc9d745ec2688acd6761ca9/input/modified/dice_ml/explainer_interfaces/explainer_base.py,columns_and_datatype_not_explicitly_set,1,228,24ba8e377462bc29059f4d8f96bcc9dd42b69360,"created a new class for dice random method (#79)
+
+small fix for dice_genetic too, given the new random explainer.
+Signed-off-by: Amit Sharma <amit_sharma@live.com>",2021-02-22 09:54:07+00:00,MODIFY,324.0,780.0,ee4b2f47385f1f851e9aee420458d3886f969006,2021-03-01T15:23:28Z,2019-05-02T09:51:02Z,dice_ml/explainer_interfaces/explainer_base.py,1.0,1.0,0.0,1.0,new_feature
+BrikerMan/Kashgari,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/BrikerManKashgari_analysis/ff5bfbf1ad6cd36e4ef990295756ed7ba14302d6/input/modified/kashgari/data/corpus.py,columns_and_datatype_not_explicitly_set,1,97,a6b44056ff4974f11da68f329591fc966583b701,"removed weibo corpus, clean up code and add eval report",2019-01-21 09:31:15+00:00,MODIFY,15.0,838.0,150da306258844c7cb407bc7afc8cc757e5c894e,2019-01-31T08:10:57Z,2019-01-19T01:53:28Z,kashgari/data/corpus.py,1.0,0.0,1.0,1.0,enhancement
+BrikerMan/Kashgari,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/BrikerManKashgari_analysis/0ccba67e34bc2ef83574c4658a3ac5e51673e95d/input/modified/kashgari/data/data_reader.py,columns_and_datatype_not_explicitly_set,1,18,671d7c502378971f12dc1c4e4b4cadae8c940fad,add dataset and model,2019-01-19 10:35:35+00:00,MODIFY,5.0,838.0,150da306258844c7cb407bc7afc8cc757e5c894e,2019-01-31T08:10:57Z,2019-01-19T01:53:28Z,kashgari/data/data_reader.py,1.0,0.0,0.0,0.0,new_feature
+BrikerMan/Kashgari,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/BrikerManKashgari_analysis/318f03092f96ac3da0f4aea3d6df65d1f376e80b/input/added/kashgari/data/pre_process.py,columns_and_datatype_not_explicitly_set,1,20,0ccba67e34bc2ef83574c4658a3ac5e51673e95d,run first model finished,2019-01-19 06:54:47+00:00,MODIFY,4.0,838.0,150da306258844c7cb407bc7afc8cc757e5c894e,2019-01-31T08:10:57Z,2019-01-19T01:53:28Z,kashgari/data/pre_process.py,0.0,0.0,0.0,0.0,other
+BrikerMan/Kashgari,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/BrikerManKashgari_analysis/9f1a87e0cb1acad8af5342369798d79b5aef1abc/input/modified/kashgari/tasks/classification/cnn_lstm_model.py,in_place_apis_misused,1,30,8a8dc3d9abca75256760df4bbaee5a644ff517c8,refactor embedding layer to enable custom embedding from scratch,2019-01-20 15:30:46+00:00,MODIFY,8.0,838.0,150da306258844c7cb407bc7afc8cc757e5c894e,2019-01-31T08:10:57Z,2019-01-19T01:53:28Z,kashgari/tasks/classification/cnn_lstm_model.py,0.0,0.0,0.0,1.0,refactoring
+feedly/transfer-nlp,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/feedlytransfer-nlp_analysis/501e38c3bce0f90396cdb1bef49a124f76e53137/input/modified/transfer_nlp/loaders/loaders.py,columns_and_datatype_not_explicitly_set,1,122,232811f4793fba3af960b2c40de337f0eaa3ec8b,clean project,2019-04-22 22:11:02+00:00,MODIFY,165.0,465.0,85515b73165c299b7a9b96d3608bd4e8ee567154,2020-05-28T17:31:53Z,2019-03-12T20:00:31Z,transfer_nlp/loaders/loaders.py,0.0,0.0,0.0,1.0,refactoring
+feedly/transfer-nlp,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/feedlytransfer-nlp_analysis/a70b49d45446a49aa1b6496360bbf58470f93df3/input/modified/transfer_nlp/loaders/vectorizers.py,columns_and_datatype_not_explicitly_set,1,16,9066f7b88d0e5e45dd2d6a9da85ec1e208a7b0a9,remove load dataframe in abstract vectorizer class,2019-05-06 16:50:22+00:00,MODIFY,237.0,465.0,85515b73165c299b7a9b96d3608bd4e8ee567154,2020-05-28T17:31:53Z,2019-03-12T20:00:31Z,transfer_nlp/loaders/vectorizers.py,0.0,0.0,1.0,1.0,enhancement
+feedly/transfer-nlp,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/feedlytransfer-nlp_analysis/9066f7b88d0e5e45dd2d6a9da85ec1e208a7b0a9/input/modified/transfer_nlp/loaders/vectorizers.py,in_place_apis_misused,1,121,a9d94b80eed0a8847ac8554ab1d994537149fb83,cleanup,2019-05-14 00:53:40+00:00,MODIFY,271.0,465.0,85515b73165c299b7a9b96d3608bd4e8ee567154,2020-05-28T17:31:53Z,2019-03-12T20:00:31Z,transfer_nlp/loaders/vectorizers.py,0.0,0.0,0.0,1.0,refactoring
+feedly/transfer-nlp,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/feedlytransfer-nlp_analysis/501e38c3bce0f90396cdb1bef49a124f76e53137/input/modified/transfer_nlp/loaders/vectorizers.py,in_place_apis_misused,2,301,232811f4793fba3af960b2c40de337f0eaa3ec8b,clean project,2019-04-22 22:11:02+00:00,MODIFY,165.0,465.0,85515b73165c299b7a9b96d3608bd4e8ee567154,2020-05-28T17:31:53Z,2019-03-12T20:00:31Z,transfer_nlp/loaders/vectorizers.py,0.0,0.0,0.0,1.0,refactoring
+feedly/transfer-nlp,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/feedlytransfer-nlp_analysis/92506b0362d15e7ddd466c8e62befec5b2545c17/input/modified/transfer_nlp/loaders/vectorizers.py,in_place_apis_misused,5,449,6d13ac06d63df9ff7033cc41937d4f5fa93a949b,cleaning code,2019-04-10 06:50:09+00:00,MODIFY,96.0,465.0,85515b73165c299b7a9b96d3608bd4e8ee567154,2020-05-28T17:31:53Z,2019-03-12T20:00:31Z,transfer_nlp/loaders/vectorizers.py,0.0,0.0,0.0,1.0,refactoring
+feedly/transfer-nlp,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/feedlytransfer-nlp_analysis/c598adc2af3c1dedae0f4ae6a41cf65d9b8f6962/input/modified/transfer_nlp/plugins/registry.py,pytorch_call_method_misused,1,302,48b9541e7b748b1050893b8344489f894bd84d4b,setup a first predictor,2019-04-19 00:19:57+00:00,MODIFY,155.0,465.0,85515b73165c299b7a9b96d3608bd4e8ee567154,2020-05-28T17:31:53Z,2019-03-12T20:00:31Z,transfer_nlp/plugins/registry.py,0.0,0.0,0.0,0.0,other
+NLeSC/mcfly,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/NLeSCmcfly_analysis/8bbed5f5cebd7cf46615a4c0fbda248ccbba85b2/input/modified/mcfly/tutorial_pamap2.py,columns_and_datatype_not_explicitly_set,1,193,9e4b6405c2166db6ef399b7e5fa3b262b1968593,fixed bug in tests and created seperate preprocess fucntion,2016-09-07 13:47:40+00:00,MODIFY,196.0,591.0,902c00fccc03160a8fcd15b268571f0e273114cb,2017-02-08T15:40:26Z,2016-05-19T13:09:26Z,mcfly/tutorial_pamap2.py,1.0,1.0,0.0,0.0,bug_fixing
+richzhang/colorization-pytorch,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/richzhangcolorization-pytorch_analysis/f57ace207cf4a63ca904b9b57f51bdd19133300a/input/modified/models/pix2pix_model.py,pytorch_call_method_misused,1,193,11d3cc13c25397caa4ed346d7d3fbfa28bfb7c0f,"add data folder back, official model",2018-09-04 01:00:43+00:00,MODIFY,263.0,294.0,,,2018-08-10T23:42:30Z,models/pix2pix_model.py,1.0,0.0,0.0,0.0,new_feature
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/0eb1515e11361483e3c390168427c22824b84a7c/input/modified/deepface/DeepFace.py,columns_and_datatype_not_explicitly_set,1,580,7f719b87bdb98ccae03216919de3a41fe9ae1287,interface functions moved to modules,2024-01-13 22:21:41+00:00,MODIFY,1157.0,1157.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/DeepFace.py,0.0,0.0,0.0,1.0,refactoring
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/9c3f30db1ac763ef08040e6f07dea5d3b6e33824/input/modified/deepface/DeepFace.py,columns_and_datatype_not_explicitly_set,2,614,dec0c34b2dcc2dd97b3f87d2183f3cdafdaa608c,new interface,2023-01-23 23:51:20+00:00,MODIFY,897.0,1157.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/DeepFace.py,1.0,0.0,0.0,0.0,new_feature
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/974f8bf27bfe5c297d0358e20b2d7e4d45c58dc6/input/modified/deepface/commons/functions.py,columns_and_datatype_not_explicitly_set,1,409,b898f97b3875140fe37823f535cabd18859ba52c,detector mechanism,2021-04-28 18:42:58+00:00,MODIFY,505.0,1157.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/commons/functions.py,0.0,0.0,0.0,0.0,other
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/b663ac641bf9f861668b8c19d6ade517a2e42171/input/modified/deepface/commons/functions.py,columns_and_datatype_not_explicitly_set,1,496,6e4cf067380fff747d4222ada2871997e18aeae4,check face_detector global variable initialized,2020-11-29 19:02:31+00:00,MODIFY,382.0,1157.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/commons/functions.py,0.0,0.0,0.0,0.0,other
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/3471874b8fdca2ee837d9410973457272117012d/input/modified/deepface/commons/functions.py,columns_and_datatype_not_explicitly_set,1,236,4f7c5273c986ca6f043eaba2c74ef6eb0370bd7f,issue 89 solved,2020-09-03 06:13:35+00:00,MODIFY,325.0,1157.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/commons/functions.py,0.0,1.0,0.0,0.0,bug_fixing
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/4f7c5273c986ca6f043eaba2c74ef6eb0370bd7f/input/modified/deepface/commons/functions.py,columns_and_datatype_not_explicitly_set,1,236,b9abfb9c00020c2bb616e52a6b5d0447f66afd0d,new backends for detectors,2020-09-05 19:47:20+00:00,MODIFY,330.0,1157.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/commons/functions.py,1.0,0.0,0.0,0.0,new_feature
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/700867c7db0f9bdaf21f7d5e0b8e9e31257c09c6/input/modified/deepface/commons/realtime.py,columns_and_datatype_not_explicitly_set,2,219,7a978d29c53c47768ffccf08123240986ad5e8d8,linting,2023-01-29 00:45:25+00:00,MODIFY,925.0,1157.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/commons/realtime.py,0.0,0.0,0.0,0.0,other
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/057f06c09c2385b1e5ee752cb0616926b1581678/input/modified/deepface/detectors/OpenCvWrapper.py,columns_and_datatype_not_explicitly_set,1,78,ea1497e35d9a9e7cf834377eb40e6038a9b07bc4,eye detection procedure,2021-06-24 13:09:34+00:00,MODIFY,559.0,1157.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/detectors/OpenCvWrapper.py,0.0,0.0,0.0,0.0,other
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/27d15d2413653d6b86674eab3f2571415519d49a/input/modified/deepface/detectors/SsdWrapper.py,columns_and_datatype_not_explicitly_set,1,101,0fd77e1c99a903878ef0029ea851ab8e5aabb2a2,"facial recognition, detector and demography models are now using interface",2024-01-20 19:23:28+00:00,MODIFY,1162.0,1162.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/detectors/SsdWrapper.py,0.0,0.0,0.0,0.0,other
+serengil/deepface,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/serengildeepface_analysis/0bb94a1a112500e9e95e3ac4dcfad7ef77c9e1ef/input/modified/deepface/models/face_detection/Ssd.py,columns_and_datatype_not_explicitly_set,1,92,a65f87a65aca689da7c8f1fca4a260c915c96223,Optimize ssd detector,2024-08-27 03:06:39+00:00,MODIFY,1609.0,1609.0,ca8a149732bc3564378da5eab622b843115a4875,2024-02-25T14:33:14Z,2020-02-08T20:42:28Z,deepface/models/face_detection/Ssd.py,0.0,0.0,1.0,0.0,enhancement
+philipperemy/deep-speaker,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/philipperemydeep-speaker_analysis/3f5383f9740a66096cee7fec99c1390f21b500e6/input/modified/next_batch.py,columns_and_datatype_not_explicitly_set,1,57,e66704f998764422a05e4a6dffd05af0072c3902,work in progress,2017-07-03 06:49:25+00:00,MODIFY,28.0,302.0,,,2017-05-19T05:06:32Z,next_batch.py,0.0,0.0,0.0,0.0,other
+philipperemy/deep-speaker,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/philipperemydeep-speaker_analysis/b71248de85a675de6e1c835a7180017fdb1d766a/input/modified/v4/batcher.py,columns_and_datatype_not_explicitly_set,1,58,cb5761884a2c59f3bd8b2ec33947037f500181ff,refactoring,2020-04-02 01:27:16+00:00,MODIFY,163.0,302.0,,,2017-05-19T05:06:32Z,v4/batcher.py,0.0,0.0,0.0,1.0,refactoring
+philipperemy/deep-speaker,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/philipperemydeep-speaker_analysis/58441c584169fc3c64c911d15d5e6278cd1705b5/input/modified/v4/utils.py,in_place_apis_misused,1,44,6a7704ba81a716cf77e74722848e3f5fdc15d1d6,refactoring,2020-04-03 02:11:39+00:00,MODIFY,179.0,302.0,,,2017-05-19T05:06:32Z,v4/utils.py,0.0,0.0,0.0,1.0,refactoring
+nyanp/nyaggle,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/nyanpnyaggle_analysis/a82c0334f6a2243c562ca71d5849adb78f34fad4/input/modified/nyaggle/experiment/gbdt.py,columns_and_datatype_not_explicitly_set,1,151,b7d9b7ff6932e5a6da7096144a45495cbf0e1886,refactoring,2020-01-05 13:38:56+00:00,MODIFY,63.0,350.0,0c0c86a33061240e9328a247a091184c8238fc7e,2020-02-17T15:00:06Z,2019-12-19T02:01:19Z,nyaggle/experiment/gbdt.py,0.0,0.0,0.0,1.0,refactoring
+nyanp/nyaggle,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/nyanpnyaggle_analysis/693609ffb0d7dd802d08ff83544b7d6006b93558/input/modified/nyaggle/experiment/gbdt.py,columns_and_datatype_not_explicitly_set,1,313,7b77100a58de265eec3d6d59319bfef2ecd86d15,interact with feature_store,2020-01-24 10:46:16+00:00,MODIFY,172.0,350.0,0c0c86a33061240e9328a247a091184c8238fc7e,2020-02-17T15:00:06Z,2019-12-19T02:01:19Z,nyaggle/experiment/gbdt.py,1.0,0.0,0.0,0.0,new_feature
+nyanp/nyaggle,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/nyanpnyaggle_analysis/98e9f05ff1e43e023e04a25277f744f87c2604f2/input/modified/nyaggle/experiment/gbdt.py,columns_and_datatype_not_explicitly_set,2,189,9e3781f23d8e960cf3108a9ce9317dbf9567aba4,Update gbdt.py,2020-01-16 03:20:20+00:00,MODIFY,125.0,350.0,0c0c86a33061240e9328a247a091184c8238fc7e,2020-02-17T15:00:06Z,2019-12-19T02:01:19Z,nyaggle/experiment/gbdt.py,0.0,0.0,1.0,0.0,enhancement
+nyanp/nyaggle,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/nyanpnyaggle_analysis/c410072c218e1bf3a9a4be122ccaab39989519a4/input/modified/nyaggle/experiment/run.py,columns_and_datatype_not_explicitly_set,1,294,93c174e291606c584cb86cfc752c8507f322501f,implement stacking and averaging,2020-02-25 14:38:26+00:00,MODIFY,305.0,350.0,0c0c86a33061240e9328a247a091184c8238fc7e,2020-02-17T15:00:06Z,2019-12-19T02:01:19Z,nyaggle/experiment/run.py,1.0,0.0,0.0,0.0,new_feature
+nyanp/nyaggle,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/nyanpnyaggle_analysis/2e77385e99e8abbea4c0afa220eaa0e0f76fbf60/input/modified/nyaggle/experiment/run.py,columns_and_datatype_not_explicitly_set,1,256,d23fc797fe3eb5c9cc3ea664178b40d056b3c3ac,refactoring,2020-02-12 15:07:23+00:00,MODIFY,218.0,350.0,0c0c86a33061240e9328a247a091184c8238fc7e,2020-02-17T15:00:06Z,2019-12-19T02:01:19Z,nyaggle/experiment/run.py,0.0,0.0,0.0,1.0,refactoring
+tensorflow/serving,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/tensorflowserving_analysis/d5b980f487996aa1f890a559eae968735dfebf5d/input/added/tensorflow_serving/experimental/example/half_plus_two_with_rpop.py,tensor_array_not_used,1,66,a069a434cfd27fc64e21bc43a11aaffd8847376b,"Update default remote model name.
+
+PiperOrigin-RevId: 327513633",2020-08-19 22:02:09+00:00,MODIFY,5085.0,5085.0,d798e1ec9df6fa28db27a5e46ae25cb3ecf5e315,2020-11-20T23:35:56Z,2016-01-26T21:48:20Z,tensorflow_serving/experimental/example/half_plus_two_with_rpop.py,0.0,0.0,1.0,0.0,enhancement
+swechhachoudhary/Handwriting-synthesis,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/swechhachoudharyHandwriting-synthesis_analysis/3844f4eef24d1b88c7de5b9ddb8d8ffd22895308/input/modified/models/models.py,pytorch_call_method_misused,1,331,4362e680765492c9180697e51da0c43ed9f5ce17,Add app description in aboutus paage,2019-08-22 17:09:33+00:00,MODIFY,128.0,145.0,,,2019-04-29T21:38:30Z,models/models.py,1.0,0.0,0.0,0.0,new_feature
+songlab-cal/tape,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/songlab-caltape_analysis/152960e708fd5edabbd867f9f972bdf8af66038f/input/modified/tape_pytorch/main.py,gradients_not_cleared_before_backward_propagation,1,423,2e0b0a6c756a790c6eeb113eb1688090d0dddf35,rewrite the main.py loop,2019-09-13 17:24:06+00:00,MODIFY,82.0,333.0,ab49d242a81f7a1d0b291507c8a0b0f5fd6d960c,2020-05-01T16:45:02Z,2019-12-09T06:02:49Z,tape_pytorch/main.py,0.0,0.0,0.0,1.0,refactoring
+songlab-cal/tape,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/songlab-caltape_analysis/9016d7ada62de892e983046890e3a942aa7e9995/input/modified/tape_pytorch/main.py,gradients_not_cleared_before_backward_propagation,2,353,af8414405cd9bacb3830debac8c6889b82dbf385,fix apex imports,2019-09-04 18:41:36+00:00,MODIFY,32.0,333.0,ab49d242a81f7a1d0b291507c8a0b0f5fd6d960c,2020-05-01T16:45:02Z,2019-12-09T06:02:49Z,tape_pytorch/main.py,0.0,1.0,0.0,0.0,bug_fixing
+songlab-cal/tape,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/songlab-caltape_analysis/81a4b0adf94246dbba51ce8808d6249be092b7ed/input/modified/tape_pytorch/main.py,gradients_not_cleared_before_backward_propagation,1,79,75232c04e037a126d25d99273fe568a782ecce0f,update tape-refactor again,2019-10-18 21:36:28+00:00,MODIFY,128.0,333.0,ab49d242a81f7a1d0b291507c8a0b0f5fd6d960c,2020-05-01T16:45:02Z,2019-12-09T06:02:49Z,tape_pytorch/main.py,0.0,0.0,1.0,1.0,enhancement
+interpretml/interpret-text,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/interpretmlinterpret-text_analysis/f7b715e4448b7f02cde2618849dba22a56bc13e9/input/modified/python/interpret_text/common/utils_introspective_rationale.py,columns_and_datatype_not_explicitly_set,1,272,88a54d28012c9b8bd5c179bd80c15a8b9fd9b217,"[WIP] Refactored code to include abstract classes for explainers (#84)
+
+* Refactored code to include abstract classes
+
+* Refactored introspective rationale explainer, related tests, added base abstract classes,
+
+* renamed test class
+
+* pydantic dependency added to conda generator file
+
+* skip introspective_rationale_test till new notebook changes are pushed to repo
+
+* implemented abstract method get_model
+
+* fixed breaking test
+
+* fixed arg error in glove preprocessor
+
+* added missing buildvocab step
+
+* flake8 error fixes
+
+* flake8 fix",2020-04-12 04:02:51+00:00,MODIFY,107.0,135.0,6609c4104dff9a5da0d470e46fd071d60e36f845,2020-05-05T19:52:00Z,2019-09-04T16:39:48Z,python/interpret_text/common/utils_introspective_rationale.py,1.0,1.0,1.0,1.0,refactoring
+tlatkowski/multihead-siamese-nets,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/tlatkowskimultihead-siamese-nets_analysis/f7e86c005a5779e5c2ecc15651bf662440f25684/input/modified/data/dataset.py,columns_and_datatype_not_explicitly_set,1,65,71c5b78991d0d1ef97448ee5db443acf82042548,init anli dataset,2019-11-04 09:11:37+00:00,MODIFY,117.0,151.0,,,2018-01-03T20:25:46Z,data/dataset.py,0.0,0.0,0.0,0.0,other
+tlatkowski/multihead-siamese-nets,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/tlatkowskimultihead-siamese-nets_analysis/a3c2a43540325443f061a74b4a2ddf5bb1c9fb2a/input/modified/data/dataset.py,columns_and_datatype_not_explicitly_set,3,52,1b689b7e678fea38765569f187c6468e975d15d0,supporting verious datasets,2018-03-25 08:38:54+00:00,MODIFY,72.0,151.0,,,2018-01-03T20:25:46Z,data/dataset.py,0.0,0.0,1.0,0.0,enhancement
+ultralytics/yolov3,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/ultralyticsyolov3_analysis/ae37b2daa74c599d640a7b9698eeafd64265f999/input/modified/models/common.py,in_place_apis_misused,1,467,f50bcfcc3e019aaa1ece410158acf3b28f3a25e5,"YOLOv3 general updates, improvements and fixes (#2011)
+
+* YOLOv3 updates
+
+* Add missing files
+
+* Reformat
+
+* [pre-commit.ci] auto fixes from pre-commit.com hooks
+
+for more information, see https://pre-commit.ci
+
+* Reformat
+
+* Reformat
+
+* Reformat
+
+* Reformat
+
+* [pre-commit.ci] auto fixes from pre-commit.com hooks
+
+for more information, see https://pre-commit.ci
+
+---------
+
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",2023-02-11 11:20:10+00:00,MODIFY,2664.0,2664.0,e285034b4b6992605833d4ee32d9df7177d4e32b,2020-12-06T17:01:13Z,2018-08-26T08:57:20Z,models/common.py,1.0,1.0,1.0,1.0,enhancement
+ultralytics/yolov3,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/ultralyticsyolov3_analysis/06525f969db5754a14f18131428fd642a4fbce60/input/modified/models/tf.py,tensor_array_not_used,1,75,2423cdd4e0f6f9c28049d0335490cdce5cb78572,"Add https://www.reddit.com/r/Ultralytics/ badge (#2277)
+
+Refactor code for speed and clarity
+
+Co-authored-by: UltralyticsAssistant <web@ultralytics.com>",2024-08-26 13:43:22+00:00,MODIFY,2845.0,2845.0,e285034b4b6992605833d4ee32d9df7177d4e32b,2020-12-06T17:01:13Z,2018-08-26T08:57:20Z,models/tf.py,1.0,0.0,0.0,1.0,new_feature
+ultralytics/yolov3,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/ultralyticsyolov3_analysis/5a566454f5efc4ce424c84826358b5de602d7aad/input/modified/train.py,gradients_not_cleared_before_backward_propagation,1,147,c807c16b7909ad6885f57f35bab678b3f3bc35f0,"Fix argument parser bad practice
+
+Keep parsing inside __main__ block and call methods with arguments
+
+Add double -- for long argument names (- reserved for shortcuts)",2018-12-05 15:57:16+00:00,MODIFY,237.0,2664.0,e285034b4b6992605833d4ee32d9df7177d4e32b,2020-12-06T17:01:13Z,2018-08-26T08:57:20Z,train.py,1.0,1.0,0.0,0.0,bug_fixing
+ultralytics/yolov3,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/ultralyticsyolov3_analysis/bf34ae007fea165255c8be1b7a835dedc49a9613/input/modified/train.py,gradients_not_cleared_before_backward_propagation,2,293,76807fae7104768650d380eaaa9dcb472f7c287d,"YOLOv5 Forward Compatibility Update (#1569)
+
+* YOLOv5 forward compatibility update
+
+* add data dir
+
+* ci test yolov3
+
+* update build_targets()
+
+* update build_targets()
+
+* update build_targets()
+
+* update yolov3-spp.yaml
+
+* add yolov3-tiny.yaml
+
+* add yolov3-tiny.yaml
+
+* Update yolov3-tiny.yaml
+
+* thop bug fix
+
+* Detection() device bug fix
+
+* Use torchvision.ops.nms()
+
+* Remove redundant download mirror
+
+* CI tests with yolov3-tiny
+
+* Update README.md
+
+* Synch train and test iou_thresh
+
+* update requirements.txt
+
+* Cat apriori autolabels
+
+* Confusion matrix
+
+* Autosplit
+
+* Autosplit
+
+* Update README.md
+
+* AP no plot
+
+* Update caching
+
+* Update caching
+
+* Caching bug fix
+
+* --image-weights bug fix
+
+* datasets bug fix
+
+* mosaic plots bug fix
+
+* plot_study
+
+* boxes.max()
+
+* boxes.max()
+
+* boxes.max()
+
+* boxes.max()
+
+* boxes.max()
+
+* boxes.max()
+
+* update
+
+* Update README
+
+* Update README
+
+* Update README.md
+
+* Update README.md
+
+* results png
+
+* Update README
+
+* Targets scaling bug fix
+
+* update plot_study
+
+* update plot_study
+
+* update plot_study
+
+* update plot_study
+
+* Targets scaling bug fix
+
+* Finish Readme.md
+
+* Finish Readme.md
+
+* Finish Readme.md
+
+* Update README.md
+
+* Creado con Colaboratory",2020-11-26 19:24:00+00:00,MODIFY,2564.0,2664.0,e285034b4b6992605833d4ee32d9df7177d4e32b,2020-12-06T17:01:13Z,2018-08-26T08:57:20Z,train.py,1.0,1.0,1.0,1.0,enhancement
+natethegreate/hent-AI,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/natethegreatehent-AI_analysis/296d5b55206586fb77ca074d7da66594f1d6eae5/input/modified/model.py,tensor_array_not_used,1,893,acc7eba13d1bf4b3cc4acd6fcb826a8ab7c58ebc,changed tf.pad for gap and resued parse_image_meta,2018-01-05 03:04:23+00:00,MODIFY,56.0,477.0,be0a8b592d4aec7dd26004bc270547af1852c69c,2020-03-04T05:12:46Z,2020-02-20T20:51:15Z,model.py,0.0,0.0,1.0,0.0,enhancement
+natethegreate/hent-AI,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/natethegreatehent-AI_analysis/e6290877a0da712ba078d3a8454d90d24e9744f4/input/modified/model.py,tensor_array_not_used,1,714,859b73c1efbb332df4dc1c22cab7ff8a5aec1ec3,"Remove unnecessary coordinate conversions.
+
+Make DetectionLayer return normalized coordinates
+to avoid unnecessary conversion to pixels and back
+to normalized.",2018-04-02 00:10:05+00:00,MODIFY,88.0,477.0,be0a8b592d4aec7dd26004bc270547af1852c69c,2020-03-04T05:12:46Z,2020-02-20T20:51:15Z,model.py,0.0,0.0,1.0,1.0,enhancement
+ultralytics/yolov5,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ultralyticsyolov5_analysis/c0e7a776cd55e8c01b63714f6f7fea3d53f6bf5b/input/modified/models/common.py,in_place_apis_misused,1,630,d40cd0d454dcc34312cb5c40f45f64b76665c40c,"Improved `Profile()` inference timing (#9024)
+
+* Improved `Profile()` class
+
+* Update predict.py
+
+* Update val.py
+
+* [pre-commit.ci] auto fixes from pre-commit.com hooks
+
+for more information, see https://pre-commit.ci
+
+* Update val.py
+
+* Update AutoShape
+
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>",2022-08-18 17:55:38+00:00,MODIFY,2230.0,2230.0,69be8e738f45e7908c1270eedd350f98c0c7bfa4,2021-01-05T03:54:09Z,2020-05-18T03:45:11Z,models/common.py,0.0,1.0,1.0,1.0,enhancement
+ultralytics/yolov5,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ultralyticsyolov5_analysis/fca5e2a48fb526b57bda0c66be6b7ac1aaa8d83d/input/modified/models/common.py,in_place_apis_misused,2,283,b5de52c4cdfefb3c7acfbff7d7f450a46b4aaada,"torch.cuda.amp bug fix (#2750)
+
+PR https://github.com/ultralytics/yolov5/pull/2725 introduced a very specific bug that only affects multi-GPU trainings. Apparently the cause was using the torch.cuda.amp decorator in the autoShape forward method. I've implemented amp more traditionally in this PR, and the bug is resolved.",2021-04-09 16:19:49+00:00,MODIFY,1019.0,2230.0,69be8e738f45e7908c1270eedd350f98c0c7bfa4,2021-01-05T03:54:09Z,2020-05-18T03:45:11Z,models/common.py,1.0,1.0,0.0,0.0,bug_fixing
+ultralytics/yolov5,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ultralyticsyolov5_analysis/3ec95f9e3dfc7d563d037440237a4a69d9984fd4/input/modified/models/tf.py,tensor_array_not_used,1,80,100a423b66fee81e0a2915d5da934d7872f12c8c,"Ultralytics Code Refactor https://ultralytics.com/actions (#13153)
+
+* Refactor code for speed and clarity
+
+* Update dataloaders.py
+
+Signed-off-by: Glenn Jocher <glenn.jocher@ultralytics.com>
+
+---------
+
+Signed-off-by: Glenn Jocher <glenn.jocher@ultralytics.com>",2024-06-30 22:17:24+00:00,MODIFY,2818.0,2818.0,69be8e738f45e7908c1270eedd350f98c0c7bfa4,2021-01-05T03:54:09Z,2020-05-18T03:45:11Z,models/tf.py,0.0,0.0,1.0,1.0,refactoring
+ultralytics/yolov5,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ultralyticsyolov5_analysis/dfdfbcf3d7d977a4e71075f65868d9f694434692/input/modified/models/yolo.py,pytorch_call_method_misused,1,249,ec331cbda7434f6c04c1c1c310dcb3948dcc5d3e,"Add missing Python function docstrings (#13105)
+
+* Add missing Python function docstrings
+
+* Auto-format by https://ultralytics.com/actions
+
+---------
+
+Co-authored-by: UltralyticsAssistant <web@ultralytics.com>
+Co-authored-by: Ultralytics Assistant <135830346+UltralyticsAssistant@users.noreply.github.com>",2024-06-19 00:29:08+00:00,MODIFY,2810.0,2810.0,69be8e738f45e7908c1270eedd350f98c0c7bfa4,2021-01-05T03:54:09Z,2020-05-18T03:45:11Z,models/yolo.py,1.0,0.0,0.0,1.0,new_feature
+ultralytics/yolov5,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ultralyticsyolov5_analysis/07493a715c9be65a52fa94a4e79a25361b340af1/input/modified/train.py,gradients_not_cleared_before_backward_propagation,2,261,4102fcc9a701b849ce4cad2de2403971aa52d790,"[WIP] Feature/ddp fixed (#401)
+
+* Squashed commit of the following:
+
+commit d738487089e41c22b3b1cd73aa7c1c40320a6ebf
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 14 17:33:38 2020 +0700
+
+    Adding world_size
+
+    Reduce calls to torch.distributed. For use in create_dataloader.
+
+commit e742dd9619d29306c7541821238d3d7cddcdc508
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 14 15:38:48 2020 +0800
+
+    Make SyncBN a choice
+
+commit e90d4004387e6103fecad745f8cbc2edc918e906
+Merge: 5bf8beb cd90360
+Author: yzchen <Chenyzsjtu@gmail.com>
+Date:   Tue Jul 14 15:32:10 2020 +0800
+
+    Merge pull request #6 from NanoCode012/patch-5
+
+    Update train.py
+
+commit cd9036017e7f8bd519a8b62adab0f47ea67f4962
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 14 13:39:29 2020 +0700
+
+    Update train.py
+
+    Remove redundant `opt.` prefix.
+
+commit 5bf8bebe8873afb18b762fe1f409aca116fac073
+Merge: c9558a9 a1c8406
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 14 14:09:51 2020 +0800
+
+    Merge branch 'master' of https://github.com/ultralytics/yolov5 into feature/DDP_fixed
+
+commit c9558a9b51547febb03d9c1ca42e2ef0fc15bb31
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 14 13:51:34 2020 +0800
+
+    Add device allocation for loss compute
+
+commit 4f08c692fb5e943a89e0ee354ef6c80a50eeb28d
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Thu Jul 9 11:16:27 2020 +0800
+
+    Revert drop_last
+
+commit 1dabe33a5a223b758cc761fc8741c6224205a34b
+Merge: a1ce9b1 4b8450b
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Thu Jul 9 11:15:49 2020 +0800
+
+    Merge branch 'feature/DDP_fixed' of https://github.com/MagicFrogSJTU/yolov5 into feature/DDP_fixed
+
+commit a1ce9b1e96b71d7fcb9d3e8143013eb8cebe5e27
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Thu Jul 9 11:15:21 2020 +0800
+
+    fix lr warning
+
+commit 4b8450b46db76e5e58cd95df965d4736077cfb0e
+Merge: b9a50ae 02c63ef
+Author: yzchen <Chenyzsjtu@gmail.com>
+Date:   Wed Jul 8 21:24:24 2020 +0800
+
+    Merge pull request #4 from NanoCode012/patch-4
+
+    Add drop_last for multi gpu
+
+commit 02c63ef81cf98b28b10344fe2cce08a03b143941
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Wed Jul 8 10:08:30 2020 +0700
+
+    Add drop_last for multi gpu
+
+commit b9a50aed48ab1536f94d49269977e2accd67748f
+Merge: ec2dc6c 121d90b
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 7 19:48:04 2020 +0800
+
+    Merge branch 'master' of https://github.com/ultralytics/yolov5 into feature/DDP_fixed
+
+commit ec2dc6cc56de43ddff939e14c450672d0fbf9b3d
+Merge: d0326e3 82a6182
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 7 19:34:31 2020 +0800
+
+    Merge branch 'feature/DDP_fixed' of https://github.com/MagicFrogSJTU/yolov5 into feature/DDP_fixed
+
+commit d0326e398dfeeeac611ccc64198d4fe91b7aa969
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 7 19:31:24 2020 +0800
+
+    Add SyncBN
+
+commit 82a6182b3ad0689a4432b631b438004e5acb3b74
+Merge: 96fa40a 050b2a5
+Author: yzchen <Chenyzsjtu@gmail.com>
+Date:   Tue Jul 7 19:21:01 2020 +0800
+
+    Merge pull request #1 from NanoCode012/patch-2
+
+    Convert BatchNorm to SyncBatchNorm
+
+commit 050b2a5a79a89c9405854d439a1f70f892139b1c
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 7 12:38:14 2020 +0700
+
+    Add cleanup for process_group
+
+commit 2aa330139f3cc1237aeb3132245ed7e5d6da1683
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 7 12:07:40 2020 +0700
+
+    Remove apex.parallel. Use torch.nn.parallel
+
+    For future compatibility
+
+commit 77c8e27e603bea9a69e7647587ca8d509dc1990d
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 7 01:54:39 2020 +0700
+
+    Convert BatchNorm to SyncBatchNorm
+
+commit 96fa40a3a925e4ffd815fe329e1b5181ec92adc8
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Mon Jul 6 21:53:56 2020 +0800
+
+    Fix the datset inconsistency problem
+
+commit 16e7c269d062c8d16c4d4ff70cc80fd87935dc95
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Mon Jul 6 11:34:03 2020 +0800
+
+    Add loss multiplication to preserver the single-process performance
+
+commit e83805563065ffd2e38f85abe008fc662cc17909
+Merge: 625bb49 3bdea3f
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Fri Jul 3 20:56:30 2020 +0800
+
+    Merge branch 'master' of https://github.com/ultralytics/yolov5 into feature/DDP_fixed
+
+commit 625bb49f4e52d781143fea0af36d14e5be8b040c
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Thu Jul 2 22:45:15 2020 +0800
+
+    DDP established
+
+* Squashed commit of the following:
+
+commit 94147314e559a6bdd13cb9de62490d385c27596f
+Merge: 65157e2 37acbdc
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Thu Jul 16 14:00:17 2020 +0800
+
+    Merge branch 'master' of https://github.com/ultralytics/yolov4 into feature/DDP_fixed
+
+commit 37acbdc0b6ef8c3343560834b914c83bbb0abbd1
+Author: Glenn Jocher <glenn.jocher@ultralytics.com>
+Date:   Wed Jul 15 20:03:41 2020 -0700
+
+    update test.py --save-txt
+
+commit b8c2da4a0d6880afd7857207340706666071145b
+Author: Glenn Jocher <glenn.jocher@ultralytics.com>
+Date:   Wed Jul 15 20:00:48 2020 -0700
+
+    update test.py --save-txt
+
+commit 65157e2fc97d371bc576e18b424e130eb3026917
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Wed Jul 15 16:44:13 2020 +0800
+
+    Revert the README.md removal
+
+commit 1c802bfa503623661d8617ca3f259835d27c5345
+Merge: cd55b44 0f3b8bb
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Wed Jul 15 16:43:38 2020 +0800
+
+    Merge branch 'feature/DDP_fixed' of https://github.com/MagicFrogSJTU/yolov5 into feature/DDP_fixed
+
+commit cd55b445c4dcd8003ff4b0b46b64adf7c16e5ce7
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Wed Jul 15 16:42:33 2020 +0800
+
+    fix the DDP performance deterioration bug.
+
+commit 0f3b8bb1fae5885474ba861bbbd1924fb622ee93
+Author: Glenn Jocher <glenn.jocher@ultralytics.com>
+Date:   Wed Jul 15 00:28:53 2020 -0700
+
+    Delete README.md
+
+commit f5921ba1e35475f24b062456a890238cb7a3cf94
+Merge: 85ab2f3 bd3fdbb
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Wed Jul 15 11:20:17 2020 +0800
+
+    Merge branch 'feature/DDP_fixed' of https://github.com/MagicFrogSJTU/yolov5 into feature/DDP_fixed
+
+commit bd3fdbbf1b08ef87931eef49fa8340621caa7e87
+Author: Glenn Jocher <glenn.jocher@ultralytics.com>
+Date:   Tue Jul 14 18:38:20 2020 -0700
+
+    Update README.md
+
+commit c1a97a7767ccb2aa9afc7a5e72fd159e7c62ec02
+Merge: 2bf86b8 f796708
+Author: Glenn Jocher <glenn.jocher@ultralytics.com>
+Date:   Tue Jul 14 18:36:53 2020 -0700
+
+    Merge branch 'master' into feature/DDP_fixed
+
+commit 2bf86b892fa2fd712f6530903a0d9b8533d7447a
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 14 22:18:15 2020 +0700
+
+    Fixed world_size not found when called from test
+
+commit 85ab2f38cdda28b61ad15a3a5a14c3aafb620dc8
+Merge: 5a19011 c8357ad
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 14 22:19:58 2020 +0800
+
+    Merge branch 'feature/DDP_fixed' of https://github.com/MagicFrogSJTU/yolov5 into feature/DDP_fixed
+
+commit 5a19011949398d06e744d8d5521ab4e6dfa06ab7
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 14 22:19:15 2020 +0800
+
+    Add assertion for <=2 gpus DDP
+
+commit c8357ad5b15a0e6aeef4d7fe67ca9637f7322a4d
+Merge: e742dd9 787582f
+Author: yzchen <Chenyzsjtu@gmail.com>
+Date:   Tue Jul 14 22:10:02 2020 +0800
+
+    Merge pull request #8 from MagicFrogSJTU/NanoCode012-patch-1
+
+    Modify number of dataloaders' workers
+
+commit 787582f97251834f955ef05a77072b8c673a8397
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 14 20:38:58 2020 +0700
+
+    Fixed issue with single gpu not having world_size
+
+commit 63648925288d63a21174a4dd28f92dbfebfeb75a
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 14 19:16:15 2020 +0700
+
+    Add assert message for clarification
+
+    Clarify why assertion was thrown to users
+
+commit 69364d6050e048d0d8834e0f30ce84da3f6a13f3
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 14 17:36:48 2020 +0700
+
+    Changed number of workers check
+
+commit d738487089e41c22b3b1cd73aa7c1c40320a6ebf
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 14 17:33:38 2020 +0700
+
+    Adding world_size
+
+    Reduce calls to torch.distributed. For use in create_dataloader.
+
+commit e742dd9619d29306c7541821238d3d7cddcdc508
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 14 15:38:48 2020 +0800
+
+    Make SyncBN a choice
+
+commit e90d4004387e6103fecad745f8cbc2edc918e906
+Merge: 5bf8beb cd90360
+Author: yzchen <Chenyzsjtu@gmail.com>
+Date:   Tue Jul 14 15:32:10 2020 +0800
+
+    Merge pull request #6 from NanoCode012/patch-5
+
+    Update train.py
+
+commit cd9036017e7f8bd519a8b62adab0f47ea67f4962
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 14 13:39:29 2020 +0700
+
+    Update train.py
+
+    Remove redundant `opt.` prefix.
+
+commit 5bf8bebe8873afb18b762fe1f409aca116fac073
+Merge: c9558a9 a1c8406
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 14 14:09:51 2020 +0800
+
+    Merge branch 'master' of https://github.com/ultralytics/yolov5 into feature/DDP_fixed
+
+commit c9558a9b51547febb03d9c1ca42e2ef0fc15bb31
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 14 13:51:34 2020 +0800
+
+    Add device allocation for loss compute
+
+commit 4f08c692fb5e943a89e0ee354ef6c80a50eeb28d
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Thu Jul 9 11:16:27 2020 +0800
+
+    Revert drop_last
+
+commit 1dabe33a5a223b758cc761fc8741c6224205a34b
+Merge: a1ce9b1 4b8450b
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Thu Jul 9 11:15:49 2020 +0800
+
+    Merge branch 'feature/DDP_fixed' of https://github.com/MagicFrogSJTU/yolov5 into feature/DDP_fixed
+
+commit a1ce9b1e96b71d7fcb9d3e8143013eb8cebe5e27
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Thu Jul 9 11:15:21 2020 +0800
+
+    fix lr warning
+
+commit 4b8450b46db76e5e58cd95df965d4736077cfb0e
+Merge: b9a50ae 02c63ef
+Author: yzchen <Chenyzsjtu@gmail.com>
+Date:   Wed Jul 8 21:24:24 2020 +0800
+
+    Merge pull request #4 from NanoCode012/patch-4
+
+    Add drop_last for multi gpu
+
+commit 02c63ef81cf98b28b10344fe2cce08a03b143941
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Wed Jul 8 10:08:30 2020 +0700
+
+    Add drop_last for multi gpu
+
+commit b9a50aed48ab1536f94d49269977e2accd67748f
+Merge: ec2dc6c 121d90b
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 7 19:48:04 2020 +0800
+
+    Merge branch 'master' of https://github.com/ultralytics/yolov5 into feature/DDP_fixed
+
+commit ec2dc6cc56de43ddff939e14c450672d0fbf9b3d
+Merge: d0326e3 82a6182
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 7 19:34:31 2020 +0800
+
+    Merge branch 'feature/DDP_fixed' of https://github.com/MagicFrogSJTU/yolov5 into feature/DDP_fixed
+
+commit d0326e398dfeeeac611ccc64198d4fe91b7aa969
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Tue Jul 7 19:31:24 2020 +0800
+
+    Add SyncBN
+
+commit 82a6182b3ad0689a4432b631b438004e5acb3b74
+Merge: 96fa40a 050b2a5
+Author: yzchen <Chenyzsjtu@gmail.com>
+Date:   Tue Jul 7 19:21:01 2020 +0800
+
+    Merge pull request #1 from NanoCode012/patch-2
+
+    Convert BatchNorm to SyncBatchNorm
+
+commit 050b2a5a79a89c9405854d439a1f70f892139b1c
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 7 12:38:14 2020 +0700
+
+    Add cleanup for process_group
+
+commit 2aa330139f3cc1237aeb3132245ed7e5d6da1683
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 7 12:07:40 2020 +0700
+
+    Remove apex.parallel. Use torch.nn.parallel
+
+    For future compatibility
+
+commit 77c8e27e603bea9a69e7647587ca8d509dc1990d
+Author: NanoCode012 <kevinvong@rocketmail.com>
+Date:   Tue Jul 7 01:54:39 2020 +0700
+
+    Convert BatchNorm to SyncBatchNorm
+
+commit 96fa40a3a925e4ffd815fe329e1b5181ec92adc8
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Mon Jul 6 21:53:56 2020 +0800
+
+    Fix the datset inconsistency problem
+
+commit 16e7c269d062c8d16c4d4ff70cc80fd87935dc95
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Mon Jul 6 11:34:03 2020 +0800
+
+    Add loss multiplication to preserver the single-process performance
+
+commit e83805563065ffd2e38f85abe008fc662cc17909
+Merge: 625bb49 3bdea3f
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Fri Jul 3 20:56:30 2020 +0800
+
+    Merge branch 'master' of https://github.com/ultralytics/yolov5 into feature/DDP_fixed
+
+commit 625bb49f4e52d781143fea0af36d14e5be8b040c
+Author: yizhi.chen <chenyzsjtu@outlook.com>
+Date:   Thu Jul 2 22:45:15 2020 +0800
+
+    DDP established
+
+* Fixed destroy_process_group in DP mode
+
+* Update torch_utils.py
+
+* Update utils.py
+
+Revert build_targets() to current master.
+
+* Update datasets.py
+
+* Fixed world_size attribute not found
+
+Co-authored-by: NanoCode012 <kevinvong@rocketmail.com>
+Co-authored-by: Glenn Jocher <glenn.jocher@ultralytics.com>",2020-07-19 19:33:30+00:00,MODIFY,469.0,2230.0,69be8e738f45e7908c1270eedd350f98c0c7bfa4,2021-01-05T03:54:09Z,2020-05-18T03:45:11Z,train.py,1.0,1.0,1.0,1.0,new_feature
+ultralytics/yolov5,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ultralyticsyolov5_analysis/c4addd7761a4627f6fa97604ad9f1124f439b774/input/modified/utils/general.py,columns_and_datatype_not_explicitly_set,1,1207,fe341fa44dfea39faeb00f96741a6e9d99b1ce7b,"Utils reorganization (#1392)
+
+* Utils reorganization
+
+* Add new utils files
+
+* cleanup
+
+* simplify
+
+* reduce datasets.py
+
+* remove evolve.sh
+
+* loadWebcam cleanup",2020-11-14 10:50:32+00:00,MODIFY,712.0,2230.0,69be8e738f45e7908c1270eedd350f98c0c7bfa4,2021-01-05T03:54:09Z,2020-05-18T03:45:11Z,utils/general.py,1.0,0.0,1.0,1.0,refactoring
+r9y9/nnsvs,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/r9y9nnsvs_analysis/c2307613f69d61b977bb06a74dfc0916add943ee/input/modified/nnsvs/base.py,pytorch_call_method_misused,1,35,75d4964fa317bd869da40549741f80d45f6da597,"Refactor model.py: split it into two modules
+
+- model.py: generic models that can be used for timelag/duration/acoustic
+models
+- acoustic_models.py: acoustic models",2022-06-10 15:21:35+00:00,MODIFY,945.0,945.0,98b2f306317726f3d250f00adb076a3d630f5d43,2022-04-26T17:10:13Z,2020-04-19T16:06:47Z,nnsvs/base.py,0.0,0.0,0.0,1.0,refactoring
+r9y9/nnsvs,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/r9y9nnsvs_analysis/6749e676e15423c151934edffbf63a7472f27662/input/modified/nnsvs/model.py,pytorch_call_method_misused,6,861,f139d15b820377b596a0617c7bf2907c6090bb8d,remove model that didn't work,2022-04-24 10:58:38+00:00,MODIFY,689.0,945.0,98b2f306317726f3d250f00adb076a3d630f5d43,2022-04-26T17:10:13Z,2020-04-19T16:06:47Z,nnsvs/model.py,0.0,0.0,1.0,1.0,enhancement
+thunlp/OpenNRE,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/thunlpOpenNRE_analysis/ab13ba52db11d772518d5d3ab598996a0707a8ed/input/added/nrekit/framework/bag_re.py,pytorch_call_method_misused,1,153,7c15c881392d8a16ea90b52a71002384255fb385,Fix bug in pcnnatt,2019-11-03 05:52:00+00:00,MODIFY,66.0,120.0,,,2017-02-26T07:37:12Z,nrekit/framework/bag_re.py,0.0,1.0,0.0,0.0,bug_fixing
+MAIF/melusine,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/MAIFmelusine_analysis/95d3e34523128001ff2939a77669edd58a29465e/input/modified/melusine/config/config.py,columns_and_datatype_not_explicitly_set,1,150,328623255a9dc6e97d9d18a2cf958be9a297337d,Update config loading,2021-09-07 12:07:19+00:00,MODIFY,470.0,470.0,ce7cf39adc0e51128307d5f1d1758d45dc70f34f,2022-06-29T08:06:19Z,2019-02-18T14:11:41Z,melusine/config/config.py,0.0,0.0,1.0,0.0,enhancement
+MAIF/melusine,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/MAIFmelusine_analysis/40bf1dfc206110b5cd819add245af37701384cab/input/modified/melusine/data/dashboard_app.py,columns_and_datatype_not_explicitly_set,2,83,11b02e6c62211c6e039a0df59180b9994160097d,Add pickle data files,2021-12-24 15:16:08+00:00,MODIFY,554.0,554.0,ce7cf39adc0e51128307d5f1d1758d45dc70f34f,2022-06-29T08:06:19Z,2019-02-18T14:11:41Z,melusine/data/dashboard_app.py,1.0,0.0,0.0,0.0,new_feature
+MAIF/melusine,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/MAIFmelusine_analysis/c4bc2b4e94253211cd44f55d4695cffdf112c6c1/input/modified/melusine/prepare_email/metadata_engineering.py,in_place_apis_misused,1,40,204c50902a8760854b63bc0dfe0227d8dc758664,Revert metadata engineering modifications,2021-09-02 07:16:26+00:00,MODIFY,462.0,470.0,ce7cf39adc0e51128307d5f1d1758d45dc70f34f,2022-06-29T08:06:19Z,2019-02-18T14:11:41Z,melusine/prepare_email/metadata_engineering.py,0.0,0.0,1.0,0.0,enhancement
+pytorch/examples,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/pytorchexamples_analysis/6a64939872f9384db0502210bf68482f03100139/input/added/distributed/tensor_parallelism/sequence_parallel_example.py,gradients_not_cleared_before_backward_propagation,1,61,c4dc481e686b5cc7d1aad9e3977b91d8ba83bddd,"[T170073014] Rewrite distributed examples for Tensor Parallel, Sequence Parallel, 2D (FSDP + TP) (#1201)
+
+* update requirements.txt
+
+* add torchrun support, move to init_device_mesh
+
+* update twod fully working
+
+* ensure proper dp group seeding for synth data
+
+* swiglu model added
+
+* sequential running of custom, auto, seq parallel models
+
+* streamline to 2D TP only for two_d_parallel example
+
+* sequence parallel working...needs init_device_mesh update
+
+* seq parallel now using init_device_mesh
+
+* tp and sp examples all working and updated
+
+* updates from code review
+
+* remove utils.py. Sample models created in example files
+
+* remove originals.py, leftover imports, various updates from code review feedback.
+
+* code linting via ruff
+
+* code formatting via ruff
+
+* move rank_log to utils.py, update example files
+
+* move logging imports and config to log_utils, update examples with new import
+
+* add gpu verification, update run_python_examples.sh
+
+* update min gpu = 4 for fsdp+tp
+
+* move gpu check to top of examples, but before import init_device_mesh to clear CI",2023-11-22 23:29:22+00:00,MODIFY,725.0,725.0,,,2016-08-24T03:12:48Z,distributed/tensor_parallelism/sequence_parallel_example.py,1.0,0.0,1.0,1.0,refactoring
+stephenhky/PyShortTextCategorization,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/stephenhkyPyShortTextCategorization_analysis/9c500df9f9cb96223b5d55ba5ec5ad736077bdf4/input/modified/shorttext/data/data_retrieval.py,columns_and_datatype_not_explicitly_set,1,31,d0edf95a4c389daf9e40677800c4ed51b669a837,rewritten load_csvdata function to save memory by without loading all data into a pandas data frame,2018-09-29 03:04:14+00:00,MODIFY,701.0,1237.0,871b9e3e8707a83174059bd1cc74b806c24a1dba,2018-10-03T16:18:18Z,2016-10-06T03:11:10Z,shorttext/data/data_retrieval.py,0.0,0.0,0.0,1.0,refactoring
+stephenhky/PyShortTextCategorization,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/stephenhkyPyShortTextCategorization_analysis/e6d469020f7138f93d85678f612c468c23dd60e3/input/added/shorttext/data/data_retrieval.py,columns_and_datatype_not_explicitly_set,1,5,a0cff3e2cfb0ab2edcf6d63fcdde1a2cbd6e778e,added documentation,2016-11-14 20:19:25+00:00,MODIFY,49.0,1237.0,871b9e3e8707a83174059bd1cc74b806c24a1dba,2018-10-03T16:18:18Z,2016-10-06T03:11:10Z,shorttext/data/data_retrieval.py,1.0,0.0,0.0,0.0,new_feature
+stephenhky/PyShortTextCategorization,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/stephenhkyPyShortTextCategorization_analysis/e76499c841ef3d422624e04dfa3392f92427eede/input/modified/shorttext/utils/dtm.py,columns_and_datatype_not_explicitly_set,1,157,ca346733450f1cade0f58da88f5281b3867a237a,removed pandas dependence in Document-Term Matrix (DTM) class,2018-09-28 03:13:18+00:00,MODIFY,697.0,1237.0,871b9e3e8707a83174059bd1cc74b806c24a1dba,2018-10-03T16:18:18Z,2016-10-06T03:11:10Z,shorttext/utils/dtm.py,0.0,0.0,1.0,1.0,enhancement
+molecularsets/moses,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/molecularsetsmoses_analysis/fe6d14f22ed7c0a8a66bbbc830fa2ad2f067cfb1/input/modified/moses/char_rnn/model.py,pytorch_call_method_misused,1,63,b892521bd6d303f1c67df5a51559e5a1b279de98,"Interface unification (#23)
+
+* fix argument type
+
+* adding interface for models trainers
+
+* AAE refactoring
+
+* char-rnn refactoring
+
+* adding interface for models trainers
+
+* AAE refactoring
+
+* char-rnn refactoring
+
+* fix argument type
+
+* adding interface for models trainers
+
+* AAE refactoring
+
+* char-rnn refactoring
+
+* aae refactoring
+
+* char_rnn refactoring
+
+* junction_tree refactoring
+
+* junction_tree refactoring, part 2
+
+* support n_workers
+
+* jt and char_rnn small refactoring
+
+* ORGAN fully refactored
+
+* moving to Logger & manual merge with the master
+
+* VAE completely refactored
+
+* train scripts unification
+
+* unify sampler & update interface & remove log_iter from VAE
+
+* refactor run.py & remove scripts & small fixes for JT and ORGAN
+
+* update readme
+
+* add newlines in readme
+
+* enable full run.py
+
+* move models_storage.py to moses/
+
+* change `== None` to `is None` in configs
+
+* tighten organ logging & simplify Logger",2019-02-04 17:00:32+00:00,MODIFY,167.0,207.0,,,2018-11-28T11:51:17Z,moses/char_rnn/model.py,1.0,1.0,1.0,1.0,bug_fixing
+molecularsets/moses,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/molecularsetsmoses_analysis/c6f6d5c2262faea8904321e19d1a36c7189f2cd7/input/modified/moses/script_utils.py,in_place_apis_misused,1,141,49808fd978500cff92044d95c25768d4f4c97399,"Precompute metrics on test splits (#14)
+
+* metrics precalculation
+
+* run.py supports precalculated statistics
+
+* GPU from run.py
+
+* imports",2018-12-25 12:09:05+00:00,MODIFY,157.0,207.0,,,2018-11-28T11:51:17Z,moses/script_utils.py,0.0,0.0,1.0,0.0,enhancement
+molecularsets/moses,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/molecularsetsmoses_analysis/b1db431ebef23ea17539cfcffc9b4f9fe07affd1/input/modified/scripts/prepare_dataset.py,columns_and_datatype_not_explicitly_set,1,47,f59448a2c9325ee730a7bfffa79bef5e444d4a50,logger,2018-10-16 18:13:36+00:00,MODIFY,96.0,207.0,,,2018-11-28T11:51:17Z,scripts/prepare_dataset.py,0.0,0.0,0.0,0.0,other
+ria-com/nomeroff-net,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ria-comnomeroff-net_analysis/6d4c40ce73812de0f125a35738e109c1cc7e9903/input/added/nomeroff_net/pipelines/number_plate_classification.py,pytorch_call_method_misused,1,48,879ea35a598a53a15478c458ebe22b358ed82696,Added batch_size and num_workers pipleine preprocessing and postprocessing params,2021-12-21 14:29:19+00:00,MODIFY,915.0,915.0,81d91f5bd47c32ad5c0b0d224f8a06d1517b8436,2022-05-20T14:00:34Z,2018-12-10T13:56:51Z,nomeroff_net/pipelines/number_plate_classification.py,1.0,0.0,0.0,0.0,new_feature
+ria-com/nomeroff-net,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ria-comnomeroff-net_analysis/8a79322b5affc77aecb5aa6ef1274320859f5291/input/modified/nomeroff_net/pipes/number_plate_keypoints_detectors/bbox_np_points.py,pytorch_call_method_misused,1,169,e3909d477330f731b5e77f65807c78c34b207163,Added nomeroff-net/tools/py tests,2022-03-14 17:27:05+00:00,MODIFY,1014.0,1014.0,81d91f5bd47c32ad5c0b0d224f8a06d1517b8436,2022-05-20T14:00:34Z,2018-12-10T13:56:51Z,nomeroff_net/pipes/number_plate_keypoints_detectors/bbox_np_points.py,1.0,0.0,0.0,0.0,new_feature
+ria-com/nomeroff-net,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ria-comnomeroff-net_analysis/6fc11585c49491f5165ccdb91e8f4296881b3fab/input/modified/nomeroff_net/pipes/number_plate_keypoints_detectors/bbox_np_points.py,pytorch_call_method_misused,1,297,cf8161012237a9d7aef456e33c6aa3970cfcb1b0,Optimize bbox_np_points.py,2022-02-15 13:23:37+00:00,MODIFY,1008.0,1008.0,81d91f5bd47c32ad5c0b0d224f8a06d1517b8436,2022-05-20T14:00:34Z,2018-12-10T13:56:51Z,nomeroff_net/pipes/number_plate_keypoints_detectors/bbox_np_points.py,0.0,0.0,1.0,0.0,enhancement
+ria-com/nomeroff-net,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735158796.965824/ria-comnomeroff-net_analysis/1bcebda7717d460c894511607396bb9492cd8794/input/modified/nomeroff_net/tools/datasets_tools.py,columns_and_datatype_not_explicitly_set,2,157,fb1cd69854759e6a495d0ee4e7306744d94d97bf,https://github.com/ria-com/nomeroff-net/issues/280,2024-12-16 06:52:41+00:00,MODIFY,1458.0,1458.0,81d91f5bd47c32ad5c0b0d224f8a06d1517b8436,2022-05-20T14:00:34Z,2018-12-10T13:56:51Z,nomeroff_net/tools/datasets_tools.py,0.0,1.0,0.0,0.0,bug_fixing
+NVIDIA/TRTorch,/home/gilberto-1/github/wrapper_code_smile/output_analysis/1735243578.6335516/NVIDIATRTorch_analysis/22451ceba842fbb34f1e4a55f1d489b568ea8909/input/modified/tools/perf/perf_run.py,in_place_apis_misused,1,275,d5dbc4d51b2b9bebcbb0b693e3ffbc9d2a1aacd8,"chore: Fix reporting to a file setting
+
+Signed-off-by: Dheeraj Peri <peri.dheeraj@gmail.com>",2022-08-20 00:48:03+00:00,MODIFY,2678.0,2678.0,07ff2441dcc82d474208a0b0619101736143370f,2022-09-14T03:30:08Z,2020-03-11T17:17:43Z,tools/perf/perf_run.py,0.0,1.0,0.0,0.0,bug_fixing
