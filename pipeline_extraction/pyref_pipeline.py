@@ -4,6 +4,7 @@ import csv
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import time
@@ -12,16 +13,17 @@ import time
 # Parameters
 # =============================================================================
 
-SUBSET = "small"  # "small" | "medium" | "large" - usato solo per nominare i file di cache
-INPUT_CSV = "../resources/small_intro_removing_output_results.csv"
-OUTPUT_CSV = "small_pyref_results.csv"
+SUBSET = "large"  # "small" | "medium" | "large" - usato solo per nominare i file di cache
+INPUT_CSV = "../resources/large_intro_removing_output_results.csv"
+OUTPUT_CSV = "large_pyref_results.csv"
+COPY_BACKUP_PYREF = "backup/large"
 
 PYREF_DIR = "pyRef"                # cartella dove si trova PyRef (creata da setup_pyref.sh)
 REPOS_DIR = None                   # None = <PYREF_DIR>/Repos
 CACHE_DIR = "pyref_cache"          # cartella per i file di cache/resume
 
 CLONE_TIMEOUT = 3600                 # secondi max per il clone completo di un repo
-COMMIT_TIMEOUT = 3600                # secondi max per l'estrazione refactoring su un commit
+COMMIT_TIMEOUT = 600                # secondi max per l'estrazione refactoring su un commit
 
 RETRY_ERRORS = False                # True = ritenta i commit finiti in error/timeout
 
@@ -108,17 +110,19 @@ def run_pyref_commit(repo, repopath, commit, cache, pyref_dir):
             os.remove(json_path)
         except OSError:
             pass
-
+    print(f"run for {repo} with {commit}", flush=True)
     try:
         res = subprocess.run(
             [sys.executable, "main.py", "getrefs", "-r", os.path.abspath(repopath), "-c", commit],
             cwd=pyref_dir, timeout=COMMIT_TIMEOUT, capture_output=True, text=True
         )
     except subprocess.TimeoutExpired:
+        print(f"failed timeout for {repo} with {commit}", flush=True)
         result = {"status": "timeout", "count": None, "types": []}
         cache["commits"][ck] = result
         return result
     except Exception as e:
+        print(f"failed exception for {repo} with {commit}", flush=True)
         result = {"status": "error", "count": None, "types": [], "msg": str(e)}
         cache["commits"][ck] = result
         return result
@@ -126,17 +130,23 @@ def run_pyref_commit(repo, repopath, commit, cache, pyref_dir):
     if "FileNotFoundError" in res.stderr or ("No such file or directory" in res.stderr):
         # nessun file .py modificato in questo commit -> nessun refactoring possibile
         # (es. commit che aggiunge solo file nuovi, merge commit, root commit, ecc.)
+        print(f"NotFound for {repo} with {commit}", flush=True)
         result = {"status": "nodiff", "count": 0, "types": []}
         cache["commits"][ck] = result
         return result
 
     if res.returncode != 0:
+        print(f"failed for {repo} with {commit}", flush=True)
         result = {"status": "error", "count": None, "types": [], "msg": res.stderr[-500:]}
         cache["commits"][ck] = result
         return result
 
     types = []
     if os.path.exists(json_path):
+        print(f"saving in backup for execution {repo}::{commit}", flush=True)
+        timestamp = int(time.time())
+        copy_path = f"{sname}-{commit}_copy_{timestamp}.json"
+        shutil.copy2(json_path, os.path.join(COPY_BACKUP_PYREF, copy_path))
         try:
             with open(json_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -188,6 +198,7 @@ def process_subset(subset, input_csv, pyref_dir, repos_dir, cache_dir):
         for cidx, commit in enumerate(commits):
             ck = f"{repo}::{commit}"
             if ck in cache["commits"]:
+                print(f"skipped for: {repo}::{commit}")
                 continue
             print(f"[{ridx+1}/{len(repos)}] {repo}  commit {cidx+1}/{len(commits)}: {commit}", flush=True)
             run_pyref_commit(repo, repopath, commit, cache, pyref_dir)

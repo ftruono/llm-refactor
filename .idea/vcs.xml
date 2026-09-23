@@ -3,8 +3,5 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pipeline_extraction/pyref" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/pipeline_extraction/pyref/Repos/AICoE/prometheus-anomaly-detector" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/pipeline_extraction/pyref/Repos/AaronWard/covidify" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/pipeline_extraction/pyref/Repos/BrikerMan/Kashgari" vcs="Git" />
   </component>
 </project>
