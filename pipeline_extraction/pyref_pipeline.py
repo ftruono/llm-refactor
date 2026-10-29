@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import csv
+import glob
 import json
 import os
 import re
@@ -15,15 +16,17 @@ import time
 
 SUBSET = "large"  # "small" | "medium" | "large" - usato solo per nominare i file di cache
 INPUT_CSV = "../resources/large_intro_removing_output_results.csv"
-OUTPUT_CSV = "large_pyref_results.csv"
+OUTPUT_CSV = "large_pyref_results_x2_full.csv"
 COPY_BACKUP_PYREF = "backup/large"
+# cartelle dove cercare i JSON di PyRef gia' prodotti (nome file: <repo>-<commit>_copy_<timestamp>.json)
+BACKUP_READ_DIRS = ["backup/large", "backup/medium", "backup/small"]
 
 PYREF_DIR = "pyRef"                # cartella dove si trova PyRef (creata da setup_pyref.sh)
 REPOS_DIR = None                   # None = <PYREF_DIR>/Repos
 CACHE_DIR = "pyref_cache"          # cartella per i file di cache/resume
 
 CLONE_TIMEOUT = 3600                 # secondi max per il clone completo di un repo
-COMMIT_TIMEOUT = 600                # secondi max per l'estrazione refactoring su un commit
+COMMIT_TIMEOUT = 90                # secondi max per l'estrazione refactoring su un commit
 
 RETRY_ERRORS = False                # True = ritenta i commit finiti in error/timeout
 
@@ -97,13 +100,49 @@ def clone_repo(repo, cache, repos_dir):
         return None
 
 
-def run_pyref_commit(repo, repopath, commit, cache, pyref_dir):
+def find_backup_json(sname, commit):
+    """JSON di PyRef gia' salvato per questo repo+commit nelle cartelle BACKUP_READ_DIRS (il piu' recente), o None."""
+    found = []
+    for d in BACKUP_READ_DIRS:
+        found.extend(glob.glob(os.path.join(d, f"{glob.escape(sname)}-{commit}_copy_*.json")))
+    return max(found, key=os.path.getmtime) if found else None
 
+
+def read_backup_json(path, commit):
+    """Ritorna (types, pyref_result): pyref_result = le entry INTERE di PyRef per questo commit."""
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    types, pyref_result = [], []
+    for entry in data:
+        if entry.get("Commit") == commit:
+            rt = entry.get("Refactoring Type")
+            if isinstance(rt, list):
+                types.extend(rt)
+            elif rt:
+                types.append(rt)
+            pyref_result.append(entry)
+    return types, pyref_result
+
+
+def run_pyref_commit(repo, repopath, commit, cache, pyref_dir):
     ck = f"{repo}::{commit}"
     if ck in cache["commits"]:
         return cache["commits"][ck]
-   # errore del json filename
+    # errore del json filename
     sname = extract_json_name(repo)
+
+    # backup gia' presente -> aggiorno la cache senza lanciare PyRef
+    backup_json = find_backup_json(sname, commit)
+    if backup_json:
+        try:
+            types, pyref_result = read_backup_json(backup_json, commit)
+            print(f"from backup {backup_json}", flush=True)
+            result = {"status": "ok", "count": len(types), "types": types, "pyref_result": pyref_result}
+            cache["commits"][ck] = result
+            return result
+        except Exception as e:
+            print(f"backup not readable ({e}), running PyRef", flush=True)
+
     json_path = os.path.join(repopath.split('/')[0], f"{sname}_data.json")
     if os.path.exists(json_path):
         try:
@@ -118,12 +157,12 @@ def run_pyref_commit(repo, repopath, commit, cache, pyref_dir):
         )
     except subprocess.TimeoutExpired:
         print(f"failed timeout for {repo} with {commit}", flush=True)
-        result = {"status": "timeout", "count": None, "types": []}
+        result = {"status": "timeout", "count": None, "types": [], "pyref_result": []}
         cache["commits"][ck] = result
         return result
     except Exception as e:
         print(f"failed exception for {repo} with {commit}", flush=True)
-        result = {"status": "error", "count": None, "types": [], "msg": str(e)}
+        result = {"status": "error", "count": None, "types": [], "pyref_result": [], "msg": str(e)}
         cache["commits"][ck] = result
         return result
 
@@ -131,17 +170,18 @@ def run_pyref_commit(repo, repopath, commit, cache, pyref_dir):
         # nessun file .py modificato in questo commit -> nessun refactoring possibile
         # (es. commit che aggiunge solo file nuovi, merge commit, root commit, ecc.)
         print(f"NotFound for {repo} with {commit}", flush=True)
-        result = {"status": "nodiff", "count": 0, "types": []}
+        result = {"status": "nodiff", "count": 0, "types": [], "pyref_result": []}
         cache["commits"][ck] = result
         return result
 
     if res.returncode != 0:
         print(f"failed for {repo} with {commit}", flush=True)
-        result = {"status": "error", "count": None, "types": [], "msg": res.stderr[-500:]}
+        result = {"status": "error", "count": None, "types": [], "pyref_result": [], "msg": res.stderr[-500:]}
         cache["commits"][ck] = result
         return result
 
     types = []
+    pyref_result = []
     if os.path.exists(json_path):
         print(f"saving in backup for execution {repo}::{commit}", flush=True)
         timestamp = int(time.time())
@@ -152,17 +192,18 @@ def run_pyref_commit(repo, repopath, commit, cache, pyref_dir):
                 data = json.load(f)
             for entry in data:
                 if entry.get("Commit") == commit:
+                    pyref_result.append(entry)
                     rt = entry.get("Refactoring Type")
                     if isinstance(rt, list):
                         types.extend(rt)
                     elif rt:
                         types.append(rt)
         except Exception as e:
-            result = {"status": "error", "count": None, "types": [], "msg": f"json parse: {e}"}
+            result = {"status": "error", "count": None, "types": [], "pyref_result": [], "msg": f"json parse: {e}"}
             cache["commits"][ck] = result
             return result
 
-    result = {"status": "ok", "count": len(types), "types": types}
+    result = {"status": "ok", "count": len(types), "types": types, "pyref_result": pyref_result}
     cache["commits"][ck] = result
     return result
 
@@ -186,7 +227,9 @@ def process_subset(subset, input_csv, pyref_dir, repos_dir, cache_dir):
 
     total_commits_all = sum(len(v) for v in repo_commits.values())
     already_done = sum(1 for repo in repos for c in repo_commits[repo] if f"{repo}::{c}" in cache["commits"])
-    print(f"Total repo: {len(repo_commits)} | Total unique commit : {total_commits_all} | already in cache: {already_done}", flush=True)
+    print(
+        f"Total repo: {len(repo_commits)} | Total unique commit : {total_commits_all} | already in cache: {already_done}",
+        flush=True)
 
     t_start = time.time()
     for ridx, repo in enumerate(repos):
@@ -200,10 +243,43 @@ def process_subset(subset, input_csv, pyref_dir, repos_dir, cache_dir):
             if ck in cache["commits"]:
                 print(f"skipped for: {repo}::{commit}")
                 continue
-            print(f"[{ridx+1}/{len(repos)}] {repo}  commit {cidx+1}/{len(commits)}: {commit}", flush=True)
+            print(f"[{ridx + 1}/{len(repos)}] {repo}  commit {cidx + 1}/{len(commits)}: {commit}", flush=True)
             run_pyref_commit(repo, repopath, commit, cache, pyref_dir)
             save_cache(cache_dir, subset, cache)
     print(f"Done subset {subset}. Elapsed: {time.time() - t_start:.1f}s", flush=True)
+
+
+def location_file(location):
+
+    location = location or ""
+    if not location.endswith(".py") and ".py/" in location:
+        return location[:location.index(".py/") + 3]
+    return location
+
+
+def same_file_result(relative_path, r):
+
+    same = [e for e in r.get("pyref_result", [])
+            if location_file(e.get("Location")) == relative_path
+            or location_file(e.get("New Location")) == relative_path]
+    if same:
+        return 1, json.dumps(same, ensure_ascii=False)
+    return 0, ""
+
+
+def same_function_result(function_name, same_file_json):
+    """
+    Solo se same_file = 1 (same_file_json valorizzato): tra le entry nello stesso file tiene quelle
+    con function_name == Original oppure == Updated.
+    Ritorna (1, JSON delle entry) se ce n'e' almeno una, altrimenti (0, "").
+    """
+    if not same_file_json:
+        return 0, ""
+    same = [e for e in json.loads(same_file_json)
+            if function_name == e.get("Original") or function_name == e.get("Updated")]
+    if same:
+        return 1, json.dumps(same, ensure_ascii=False)
+    return 0, ""
 
 
 def build_output_csv(subset, input_csv, output_csv, cache_dir):
@@ -216,6 +292,10 @@ def build_output_csv(subset, input_csv, output_csv, cache_dir):
         c_rem = row.get("new_commit", "")
         r_intro = cache["commits"].get(f"{repo}::{c_intro}", {})
         r_rem = cache["commits"].get(f"{repo}::{c_rem}", {})
+        same_i, out_i = same_file_result(row.get("relative_path", ""), r_intro)
+        same_r, out_r = same_file_result(row.get("relative_path", ""), r_rem)
+        func_i, func_out_i = same_function_result(row.get("function_name", ""), out_i)
+        func_r, func_out_r = same_function_result(row.get("function_name", ""), out_r)
         out_rows.append({
             "repo": repo,
             "smell_name": row.get("smell_name", ""),
@@ -227,8 +307,26 @@ def build_output_csv(subset, input_csv, output_csv, cache_dir):
             "pyref_ref_removed": ";".join(r_rem.get("types", [])),
             "pyref_ref_removed_count": r_rem.get("count", ""),
             "pyref_ref_removed_status": r_rem.get("status", "missing"),
+            "same_file_intro": same_i,
+            "py_ref_out_same_file_intro": out_i,
+            "same_file_removed": same_r,
+            "py_ref_out_same_file_removed": out_r,
+            "same_function_intro": func_i,
+            "pyref_out_same_function_intro": func_out_i,
+            "same_function_removed": func_r,
+            "pyref_out_same_function_removed": func_out_r,
         })
-    fieldnames = list(out_rows[0].keys()) if out_rows else []
+        fieldnames = [
+            "repo", "smell_name",
+            # introduzione
+            "commitid_introduced", "pyref_refactor_intro", "pyref_refactor_intro_count", "pyref_refactor_intro_status",
+            "same_file_intro", "py_ref_out_same_file_intro",
+            "same_function_intro", "pyref_out_same_function_intro",
+            # rimozione
+            "commitid_removed", "pyref_ref_removed", "pyref_ref_removed_count", "pyref_ref_removed_status",
+            "same_file_removed", "py_ref_out_same_file_removed",
+            "same_function_removed", "pyref_out_same_function_removed",
+        ]
     with open(output_csv, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
